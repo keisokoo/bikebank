@@ -4,8 +4,10 @@ html(lang="ko")
     block head
       title #{title}
       meta(property="og:title" content=title)
-    include includes/head-default.pug
     include includes/meta.pug
+    include includes/head-default.pug
+    block styles
+    include includes/styles.pug
   body
     include includes/nav.pug
     block contents

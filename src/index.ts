@@ -1,2 +1,10 @@
+import Swiper from 'swiper'
 import '../style.scss'
-console.log('ts loaded')
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  })
+  console.log('ts loaded', swiper)
+})
