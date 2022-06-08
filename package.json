@@ -1,0 +1,23 @@
+{
+  "name": "bikebank-kr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-ts": "tsc",
+    "build-sass": "sass styles/:dist/",
+    "watch-ts": "tsc --watch",
+    "watch-scss": "sass styles/:dist/ --watch",
+    "watch-http": "es-dev-server --app-index index.html --node-resolve --watch --open",
+    "start": "concurrently --kill-others 'npm:watch-*'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "es-dev-server": "^2.1.0",
+    "sass": "^1.52.2",
+    "typescript": "^4.7.3"
+  }
+}
