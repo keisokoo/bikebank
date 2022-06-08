@@ -2,8 +2,8 @@ doctype html
 html(lang="ko")
   head 
     block head
-      title Site
-      meta(property="og:title" content="Site")
+      title #{title}
+      meta(property="og:title" content=title)
     include includes/head-default.pug
     include includes/meta.pug
   body
