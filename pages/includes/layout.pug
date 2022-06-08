@@ -1,0 +1,16 @@
+doctype html
+html(lang="ko")
+  head 
+    block head
+      title #{title}
+      meta(property="og:title" content=title)
+    include meta.pug
+    include head-default.pug
+    block styles
+    include styles.pug
+  body
+    include nav.pug
+    block contents
+    block footer
+      include footer.pug
+    include scripts.pug

@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && parcel build index.pug -d dist --no-minify --no-source-maps&& cp public/* dist",
-    "dev": "parcel index.pug --open",
+    "build": "rm -rf dist && parcel build pages/index.pug -d dist --no-minify --no-source-maps&& cp public/* dist",
+    "dev": "parcel pages/index.pug",
     "start-parcel": "npm run build && npm run dev"
   },
   "author": "",
