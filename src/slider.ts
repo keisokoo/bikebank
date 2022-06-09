@@ -6,5 +6,4 @@ document.addEventListener('DOMContentLoaded', () => {
     direction: 'vertical',
     loop: true,
   })
-  console.log('ts loaded', swiper)
 })

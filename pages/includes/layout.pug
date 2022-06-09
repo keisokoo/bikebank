@@ -8,11 +8,12 @@ html(lang="ko")
     include head-default.pug
     block styles
     include styles.pug
+    block head-script
   body
     include nav.pug
     #app
       block contents
     block footer
-      include footer.pug
-    block page-script
+      include footer.pug 
     include scripts.pug
+    block page-script
