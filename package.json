@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "rm -rf site && parcel build pages/index.pug --dist-dir site --no-source-maps && prettier -w site/**/*.html site/css/**/*.css && cp public/* site",
-    "dev": "parcel pages/index.pug",
-    "start-parcel": "npm run build && npm run dev",
-    "format": "prettier -w site/**/*.html"
+    "start": "parcel pages/index.pug",
+    "build": "rm -rf site && parcel build pages/index.pug --dist-dir site --no-source-maps && prettier -w site/**/*.html site/css/**/*.css && cp public/* site"
   },
   "author": "",
   "license": "ISC",
@@ -16,8 +14,6 @@
   "devDependencies": {
     "@parcel/transformer-pug": "2.6.0",
     "@parcel/transformer-sass": "2.6.0",
-    "concurrently": "^7.2.1",
-    "es-dev-server": "^2.1.0",
     "parcel": "^2.6.0",
     "parcel-namer-struct": "^1.0.0",
     "prettier": "^2.6.2",
