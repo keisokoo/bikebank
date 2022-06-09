@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "rm -rf site && parcel build pages/index.pug --dist-dir site --no-source-maps && cp public/* site",
-    "dev": "parcel pages/index.pug --open",
+    "dev": "parcel pages/index.pug",
     "start-parcel": "npm run build && npm run dev"
   },
   "author": "",
