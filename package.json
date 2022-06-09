@@ -2,10 +2,9 @@
   "name": "bikebank-kr",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && parcel build pages/index.pug -d dist --no-minify --no-source-maps&& cp public/* dist",
-    "dev": "parcel pages/index.pug",
+    "build": "rm -rf site && parcel build pages/index.pug --dist-dir site --no-source-maps && cp public/* site",
+    "dev": "parcel pages/index.pug --open",
     "start-parcel": "npm run build && npm run dev"
   },
   "author": "",
@@ -14,11 +13,39 @@
     "swiper": "^8.2.2"
   },
   "devDependencies": {
+    "@parcel/transformer-pug": "2.6.0",
+    "@parcel/transformer-sass": "2.6.0",
     "concurrently": "^7.2.1",
     "es-dev-server": "^2.1.0",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.6.0",
+    "parcel-namer-struct": "^1.0.0",
     "pug": "^3.0.2",
     "sass": "^1.52.2",
     "typescript": "^4.7.3"
-  }
+  },
+  "parcel-namer-struct": [
+    {
+      "type": [
+        "png",
+        "jpg",
+        "jpeg",
+        "svg"
+      ],
+      "dest": "/images/"
+    },
+    {
+      "type": [
+        "js",
+        "js.map"
+      ],
+      "dest": "/js/"
+    },
+    {
+      "type": [
+        "css",
+        "css.map"
+      ],
+      "dest": "/css/"
+    }
+  ]
 }

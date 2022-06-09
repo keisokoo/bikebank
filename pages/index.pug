@@ -1,11 +1,19 @@
 extends includes/layout.pug
-block styles
-  link(rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css")
+
+mixin withClassTest(test, name)
+  //- attributes == {class: "btn"}
+  div(class=attributes.class data-test=test)= name
+
+mixin ayo(name, idx)
+  div(data-idx=idx)= name
+
+block head
+  title Scooter
+  meta(property="og:title" content="Scooter")
+
 block contents
-  div.swiper
-    div.swiper-wrapper
-      div.swiper-slide slide1
-      div.swiper-slide slide2
-      div.swiper-slide slide3
-      div.swiper-slide slide4
-      div.swiper-slide slide5
+  - const list = ['zero', 'one', 'two']
+  +withClassTest('hehe', 'hoho')(class="ccc")
+  div.list-wrap
+    each val, index in list
+      +ayo(val, index)

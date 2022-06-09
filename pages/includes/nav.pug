@@ -2,11 +2,11 @@ mixin navTheme(color)
   nav(data-color=color)
     #nav-wrap
       #home
-        a(href="/index.pug")
-          img(src="../assets/svg/logo.svg")
+        a(href="./index.pug")
+          img(src="/assets/svg/logo.svg")
       #menu
-        a(href="/scooter.pug") 스마트 스쿠터
-        a(href="/scooter.pug") 고고로 네트워크
-        a(href="/scooter.pug") 최신소식
-        a(href="/scooter.pug") 고객지원
+        a(href="./scooter.pug") 스마트 스쿠터
+        a(href="./network.pug") 고고로 네트워크
+        a(href="./news.pug") 최신소식
+        a(href="./customer.pug") 고객지원
 +navTheme('black')

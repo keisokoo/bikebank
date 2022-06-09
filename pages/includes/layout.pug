@@ -10,7 +10,9 @@ html(lang="ko")
     include styles.pug
   body
     include nav.pug
-    block contents
+    #app
+      block contents
     block footer
       include footer.pug
+    block page-script
     include scripts.pug
