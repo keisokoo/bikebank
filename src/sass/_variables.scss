@@ -1,1 +1,129 @@
 $nav_height: 73px;
+$inner-width: 1120px;
+:root {
+  /* Colors: */
+  --unnamed-color-1c1c1c: #1c1c1c;
+  --unnamed-color-0077ff: #0077ff;
+  --unnamed-color-1a416e: #1a416e;
+
+  /* Font/text values */
+  --unnamed-font-family-segoe-ui: Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-bold: 500;
+  --unnamed-font-weight-normal: 400;
+  --unnamed-font-size-18: 18px;
+  --unnamed-font-size-20: 20px;
+  --unnamed-font-size-22: 22px;
+  --unnamed-font-size-46: 46px;
+  --unnamed-font-size-48: 48px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-character-spacing--2-4: -2.4px;
+  --unnamed-character-spacing--0-9: -0.9px;
+  --unnamed-character-spacing--0-55: -0.55px;
+  --unnamed-character-spacing--0-46: -0.46px;
+  --unnamed-line-spacing-28: 28px;
+  --unnamed-line-spacing-30: 30px;
+  --unnamed-line-spacing-35: 35px;
+  --unnamed-line-spacing-55: 55px;
+  --unnamed-line-spacing-58: 58px;
+}
+
+/* Character Styles */
+.unnamed-character-style-1 {
+  font-family: var(--unnamed-font-family-segoe-ui);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-20);
+  line-height: var(--unnamed-line-spacing-30);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-1a416e);
+}
+.unnamed-character-style-2 {
+  font-family: var(--unnamed-font-family-segoe-ui);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-48);
+  line-height: var(--unnamed-line-spacing-58);
+  letter-spacing: var(--unnamed-character-spacing--2-4);
+  color: var(--unnamed-color-1a416e);
+}
+.unnamed-character-style-3 {
+  font-family: var(--unnamed-font-family-segoe-ui);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-18);
+  line-height: var(--unnamed-line-spacing-28);
+  letter-spacing: var(--unnamed-character-spacing--0-9);
+  color: var(--unnamed-color-0077ff);
+}
+.unnamed-character-style-4 {
+  font-family: var(--unnamed-font-family-segoe-ui);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-22);
+  line-height: var(--unnamed-line-spacing-35);
+  letter-spacing: var(--unnamed-character-spacing--0-55);
+  color: var(--unnamed-color-1c1c1c);
+}
+.unnamed-character-style-5 {
+  font-family: var(--unnamed-font-family-segoe-ui);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-46);
+  line-height: var(--unnamed-line-spacing-55);
+  letter-spacing: var(--unnamed-character-spacing--0-46);
+  color: var(--unnamed-color-1c1c1c);
+}
+@mixin text-with-more(
+  $top-size: 125px,
+  $text-color: #1c1c1c,
+  $link-color: #0077ff
+) {
+  .text-box {
+    position: absolute;
+    width: 100%;
+    top: $top-size;
+    text-align: center;
+    .t1 {
+      color: $text-color;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-46) /
+        var(--unnamed-line-spacing-55) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-46);
+      margin-bottom: 13px;
+    }
+    .sub {
+      color: $text-color;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-22) /
+        var(--unnamed-line-spacing-35) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-55);
+      margin-bottom: 27px;
+    }
+    .link {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) /
+        var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-9);
+      color: $link-color;
+    }
+  }
+}
+@mixin one-bg-contents(
+  $con-height,
+  $top-size: 125px,
+  $text-color: #1c1c1c,
+  $link-color: #0077ff
+) {
+  width: 100%;
+  max-width: 1920px;
+  margin: 20px auto 0;
+  height: $con-height;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @include text-with-more($top-size, $text-color, $link-color);
+}

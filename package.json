@@ -7,7 +7,10 @@
     "dev": "webpack serve --node-env=development",
     "build": "webpack --node-env=production",
     "format": "prettier -w dist/*.html -w dist/**/*.html -w dist/assets/**/*.css",
-    "prod": "yarn build && yarn format"
+    "packaging": "yarn build && yarn format",
+    "docker:build": "docker build -t bikebank.obj.kr .",
+    "kubectl:rollout": "kubectl rollout restart deploy bikebank-deployment",
+    "deploy": "yarn packaging && yarn docker:build && yarn kubectl:rollout"
   },
   "author": "",
   "license": "ISC",

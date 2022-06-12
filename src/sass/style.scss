@@ -3,6 +3,7 @@
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
     "Malgun Gothic", sans-serif;
+  box-sizing: border-box;
 }
 body,
 html {
@@ -11,9 +12,13 @@ html {
   width: 100%;
   height: auto;
 }
+img {
+  max-width: 100%;
+}
 @import "./variables";
 @import "./nav";
 @import "./main";
+@import "./footer";
 a {
   text-decoration: none;
   color: black;
