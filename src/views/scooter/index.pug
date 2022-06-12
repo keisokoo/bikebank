@@ -1,0 +1,15 @@
+extends ../../includes/layout.pug
+block styles
+  link(rel="stylesheet" href=require("../../../node_modules/swiper/swiper-bundle.min.css"))
+
+block contents
+  div.swiper
+    div.swiper-wrapper
+      div.swiper-slide slide1
+      div.swiper-slide slide2
+      div.swiper-slide slide3
+      div.swiper-slide slide4
+      div.swiper-slide slide5
+
+block page-script
+  script(type="module" src=require("../../scripts/slider.ts"))

@@ -1,0 +1,32 @@
+include mixins.pug
+doctype html
+html(lang="ko-KR")
+  head 
+    block head
+      title #{title}
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(property="og:title" content=title)
+    meta(name="description" content=description)
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://gogoro.kr")
+    meta(property="og:image" content="/title.jpg")
+    meta(name="theme-color" content="#fafafa")
+    link(rel="icon" type="image/icon" href="/favicon.ico")
+    link(rel="icon" type="image/png" href="/BB_icon.png")
+    link(rel="apple-touch-icon" href="/BB_icon.png")
+    block styles
+    link(rel="stylesheet" href="/sources/normalize.css")
+    link(rel="stylesheet" href=require("../sass/style.scss"))
+    block head-script
+  body
+    block nav
+      +navTheme('white')
+    #app
+      block contents
+    block footer
+    script(src="/sources/modernizr-3.11.2.min.js")
+    script(src="/assets/js/main.js")
+    if isDev
+      script(src=require("../scripts/dummy.ts"))
+    block page-script
