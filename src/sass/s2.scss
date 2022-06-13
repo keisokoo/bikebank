@@ -104,3 +104,81 @@
   width: 100%;
   min-height: 940px;
 }
+
+.s2-five {
+  @include backgroundInit();
+  width: 100%;
+  min-height: 1260px;
+}
+
+.s2-six {
+  @include backgroundInit();
+  width: 100%;
+  padding: 295px 0 283px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & > .text-box {
+    text-align: center;
+    color: #ffffff;
+    .t1 {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) 58px/70px
+        var(--unnamed-font-family-segoe-ui);
+      letter-spacing: -2.9px;
+    }
+    .sub {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-22) / 34px
+        var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-55);
+      margin-top: 32px;
+    }
+  }
+}
+.system-column {
+  margin-top: 154px;
+  display: flex;
+  flex-direction: column;
+  .system-row {
+    display: flex;
+    & > div {
+      @include backgroundInit();
+      width: 450px;
+      height: 390px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 37px;
+      background-color: #202023;
+      &.black {
+        background-color: #000000;
+      }
+      .text-box {
+        text-align: center;
+        .t1 {
+          font: var(--unnamed-font-style-normal) normal
+            var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+            var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+          letter-spacing: var(--unnamed-character-spacing--0-9);
+        }
+        .sub {
+          letter-spacing: -0.8px;
+          font: var(--unnamed-font-style-normal) normal
+            var(--unnamed-font-weight-normal) 16px/24px
+            var(--unnamed-font-family-segoe-ui);
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
+.s2-seven {
+  background-color: #f6f6f6;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 1350px;
+}
