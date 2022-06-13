@@ -1,0 +1,35 @@
+extends ../../../includes/layout.pug
+
+block styles
+    link(rel="stylesheet" href=require("../../../sass/s2.scss"))
+
+block nav
+  +navTheme('black')
+
+block contents
+  .s2-one(style={"background-image":`url(${require("../../../images/scooter/s2/s2_1.png")})`})
+    .text-box
+      .sub 초월하기 위해 태어났다
+      .t1 고고로 S2
+  .s2-two(style={"background-image":`url(${require("../../../images/scooter/s2/s2_2.png")})`})
+  .s2-three(style={"background-image":`url(${require("../../../images/scooter/s2/s2_3.png")})`})
+    .text-box
+      .t1 번개처럼 빠르다
+      .sub 수많은 디테일은 오직 라이더의 궁극적인 성능에 대한 갈망을 실현합니다.#[br]유려하고 날렵한 체감은 모두가 놀라움을 자아내며 새로운 기준이 될 것입니다.
+      .spec-box
+        div
+          .top
+            .point 3.7
+            .unit 초
+          .bottom 0-50 KM/H#[br]직선가속
+        div
+          .top
+            .point 7.2
+            .unit kW @#[br]5,000 rpm
+          .bottom 효율적인 모터 출력
+        div
+          .top
+            .point 202
+            .unit NM#[br]토크
+          .bottom 강한토크
+  .s2-four(style={"background-image":`url(${require("../../../images/scooter/s2/s2_4.png")})`})  

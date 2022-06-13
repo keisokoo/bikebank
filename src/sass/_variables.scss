@@ -127,3 +127,8 @@ $inner-width: 1120px;
   position: relative;
   @include text-with-more($top-size, $text-color, $link-color);
 }
+@mixin backgroundInit() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

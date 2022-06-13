@@ -13,11 +13,13 @@
   overflow: hidden;
   .swiper-slide {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 0px;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .img-box {
       max-width: 100%;
       width: 200px;

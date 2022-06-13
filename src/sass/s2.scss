@@ -1,0 +1,106 @@
+@import "./variables";
+
+.s2-one {
+  @include backgroundInit();
+  width: 100%;
+  height: 100vh;
+  min-height: 1080px;
+  position: relative;
+  .text-box {
+    position: absolute;
+    left: 50%;
+    bottom: 97px;
+    transform: translateX(-50%);
+    color: #ffffff;
+    .sub {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) var(--unnamed-font-size-22) / 26px
+        var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-55);
+    }
+    .t1 {
+      margin-top: 12px;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) var(--unnamed-font-size-46) /
+        var(--unnamed-line-spacing-55) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: -2.3px;
+    }
+  }
+}
+.s2-two {
+  @include backgroundInit();
+  width: 100%;
+  min-height: 940px;
+}
+.s2-three {
+  @include backgroundInit();
+  width: 100%;
+  min-height: 940px;
+  .text-box {
+    margin: 0 auto 0;
+    padding-top: 133px;
+    text-align: center;
+    color: #ffffff;
+    .t1 {
+      letter-spacing: -2.9px;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) 58px/70px
+        var(--unnamed-font-family-segoe-ui);
+      margin-bottom: 32px;
+    }
+    .sub {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-22) / 34px
+        var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-55);
+      margin-bottom: 26px;
+    }
+    .spec-box {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      & > div {
+        background-color: #414141;
+        position: relative;
+        width: 200px;
+        height: 185px;
+        text-align: left;
+        .top {
+          position: absolute;
+          left: 20px;
+          top: 28px;
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          .point {
+            letter-spacing: -2.9px;
+            font: var(--unnamed-font-style-normal) normal 400 58px /
+              var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
+          }
+          .unit {
+            font: var(--unnamed-font-style-normal) normal 300
+              var(--unnamed-font-size-18) / 22px
+              var(--unnamed-font-family-segoe-ui);
+            letter-spacing: var(--unnamed-character-spacing--0-9);
+          }
+        }
+        .bottom {
+          position: absolute;
+          left: 20px;
+          bottom: 22px;
+          font: var(--unnamed-font-style-normal) normal
+            var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) / 25px
+            var(--unnamed-font-family-segoe-ui);
+          letter-spacing: var(--unnamed-character-spacing-0);
+        }
+      }
+    }
+  }
+}
+
+.s2-four {
+  @include backgroundInit();
+  width: 100%;
+  min-height: 940px;
+}

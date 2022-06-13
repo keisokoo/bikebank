@@ -24,10 +24,10 @@ block styles
 block contents
   -
     var motors = [
-      {url:"../../images/scooter/m1.png", label:"고고로 S2"},
-      {url:"../../images/scooter/m2.png", label:"고고로 S2 플러스"},
-      {url:"../../images/scooter/m3.png", label:"고고로 2 유틸리티"},
-      {url:"../../images/scooter/m4.png", label:"고고로 VIVA"}
+      {url:"../../images/scooter/m1.png", label:"고고로 S2", link: "/scooter/s2"},
+      {url:"../../images/scooter/m2.png", label:"고고로 S2 플러스", link: "/scooter/s2"},
+      {url:"../../images/scooter/m3.png", label:"고고로 2 유틸리티", link: "/scooter/s2"},
+      {url:"../../images/scooter/m4.png", label:"고고로 VIVA", link: "/scooter/s2"}
     ];
   -
     var describesOne = [
@@ -52,8 +52,9 @@ block contents
       div.swiper-wrapper
         each val, index in motors
           div.swiper-slide 
-            img.img-box(src=require(val.url))
-            .b1=val.label
+            a(href=val.link)
+              img.img-box(src=require(val.url))
+              .b1=val.label
   .scooter-one(style={"background-image": `url(${require("../../images/scooter/img-scooter-home-banner.png")})`})
     .text-box
       .sub 고고로 스마트 스쿠터
