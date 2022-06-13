@@ -1,14 +1,33 @@
 extends ../../includes/layout.pug
+
+mixin scooterPageSlider(clName, listArr, title, contents, last=false)
+  div(class=`describe-wrapper-${clName} describe-wrapper${last?' last':''}`)
+    .describe-title
+      .t1=title
+      .sub=contents
+    div(class=`swiper-describe-${clName} swiper-box`)
+      button.slide-control-btn.prev
+        img(src=require("../../images/prev_arrow.svg"))
+      button.slide-control-btn.next
+        img(src=require("../../images/next_arrow.svg"))
+      div.swiper-wrapper
+        each val, index in listArr
+          div.swiper-slide 
+            .img-box(style={"background-image":`url(${require(val.url)})`})
+            .text-box
+              .t1=val.title
+              .sub=val.sub
+
 block styles
   link(rel="stylesheet" href=require("../../../node_modules/swiper/swiper-bundle.min.css"))
 
 block contents
-  - 
+  -
     var motors = [
-      {"url":"../../images/scooter/S2ABS_EU_Indigo_03_Left_Side.png", "width":207, "height":135, "label":"고고로 S2"},
-      {"url":"../../images/scooter/2plus_EU_White_03_Left_Side_20cm.png", "width":177, "height":134, "label":"고고로 S2 플러스"},
-      {"url":"../../images/scooter/L.psb-cmyk.png", "width":216, "height":118, "label":"고고로 2 유틸리티"},
-      {"url":"../../images/scooter/VivaKeyless_EU_LimeGrey_03_Left_Side-008.png", "width":212, "height":120, "label":"고고로 VIVA"}
+      {url:"../../images/scooter/S2ABS_EU_Indigo_03_Left_Side.png", label:"고고로 S2"},
+      {url:"../../images/scooter/2plus_EU_White_03_Left_Side_20cm.png", label:"고고로 S2 플러스"},
+      {url:"../../images/scooter/L.psb-cmyk.png", label:"고고로 2 유틸리티"},
+      {url:"../../images/scooter/VivaKeyless_EU_LimeGrey_03_Left_Side-008.png", label:"고고로 VIVA"}
     ];
   -
     var describesOne = [
@@ -40,8 +59,10 @@ block contents
       .sub 고고로 스마트 스쿠터
       .t1 비교할 수 없는
       .des 혁신적인 디자인과 생각으로 만드는 모빌리티를 경험하세요.#[br]Smartscooter® 스마트 전기 스쿠터, 디지털 주행의 시대를 여기에서 시작하세요.
-  .describe-wrapper-one
-    div.swiper-describe-one
-      div.swiper-wrapper
+  +scooterPageSlider('one', describesOne, "똑똑한, 표준적인", "디지털 업그레이드를 통해 당신의 차를 더 새롭고 더 똑똑하게 만들고, 스마트 기술과 결합하여 더 강력한 안전 기능과 맞춤형 설정을 제공합니다.")
+  +scooterPageSlider('two', describesTwo, "간단하고 직관적이어서\n누구나 할 수 있습니다.", "차량의 모든면에서, 혁신을 통해 더 쉽게 타고 완벽하게 주행할 수 있습니다.")
+  +scooterPageSlider('three', describesThree, "교체를 위해 이동", "줄을 설 필요가 없고, 매연이 없고, 계산을 기다리지 않고, 몇 초 만에 배터리를 교체할 수 있습니다.", true)
+  .motors-last
+
 block page-script
   script(type="module" src=require("../../scripts/slider.ts"))
