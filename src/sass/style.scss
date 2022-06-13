@@ -19,6 +19,7 @@ img {
 @import "./nav";
 @import "./main";
 @import "./footer";
+@import "./scooter";
 a {
   text-decoration: none;
   color: black;
@@ -29,20 +30,6 @@ a {
   flex-direction: column;
   gap: 16px;
   padding: 16px 0;
-}
-.swiper {
-  width: 600px;
-  height: 300px;
-}
-.swiper-slide {
-  background-color: chocolate;
-  color: aliceblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bolder;
 }
 .inactive {
   width: 100%;
