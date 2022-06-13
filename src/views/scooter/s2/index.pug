@@ -1,7 +1,8 @@
 extends ../../../includes/layout.pug
 
 block styles
-    link(rel="stylesheet" href=require("../../../sass/s2.scss"))
+  link(rel="stylesheet" href=require("../../../../node_modules/swiper/swiper-bundle.min.css"))
+  link(rel="stylesheet" href=require("../../../sass/s2.scss"))
 
 block nav
   +navTheme('black')
@@ -64,6 +65,22 @@ block contents
             .sub 대구경, 고강도 프론트 서스펜션 시스템은#[br]고속 주행 시 바닥면의 요철을 완벽하게 흡수합니다.#[br]업그레이드된 프론트 및 리어 댐핑 조절이 가능해#[br]각 도로의 도전이 더욱 매력적입니다.
         div.black(style={"background-image":`url(${require("../../../images/scooter/s2/s2_6_4.png")})`})
   .s2-seven
+    -
+      var motors = [
+        {url:"../../../images/scooter/m1.png", label:"고고로 S2", link: "/scooter/s2"},
+        {url:"../../../images/scooter/m2.png", label:"고고로 S2 플러스", link: "/scooter/s2"},
+        {url:"../../../images/scooter/m3.png", label:"고고로 2 유틸리티", link: "/scooter/s2"},
+        {url:"../../../images/scooter/m4.png", label:"고고로 VIVA", link: "/scooter/s2"}
+      ];
+  .motors-wrapper
+    div.swiper-motors
+      div.swiper-wrapper
+        each val, index in motors
+          div.swiper-slide 
+            a(href=val.link)
+              img.img-box(src=require(val.url))
+              .b1=val.label
+      .swiper-pagination
 
 block page-script
   script(type="module" src=require("../../../scripts/s2-slider.ts"))

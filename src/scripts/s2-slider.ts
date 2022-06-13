@@ -1,11 +1,17 @@
 import Swiper, { Pagination } from "swiper"
 
 document.addEventListener("DOMContentLoaded", () => {
-  new Swiper(".swiper-motors", {
+  const swiper = new Swiper(".swiper-motors", {
     direction: "horizontal",
-    modules: [Pagination],
-    slidesPerView: "auto",
+    slidesPerView: 1,
     spaceBetween: 16,
     loop: false,
+    modules: [Pagination],
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      enabled: true,
+      clickable: true,
+    },
   })
 })
