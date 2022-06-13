@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 16,
     loop: false,
     breakpoints: {
       300: {
@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       640: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 16,
       },
       1048: {
         slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 16,
       },
     },
   })

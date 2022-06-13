@@ -24,10 +24,10 @@ block styles
 block contents
   -
     var motors = [
-      {url:"../../images/scooter/S2ABS_EU_Indigo_03_Left_Side.png", label:"고고로 S2"},
-      {url:"../../images/scooter/2plus_EU_White_03_Left_Side_20cm.png", label:"고고로 S2 플러스"},
-      {url:"../../images/scooter/L.psb-cmyk.png", label:"고고로 2 유틸리티"},
-      {url:"../../images/scooter/VivaKeyless_EU_LimeGrey_03_Left_Side-008.png", label:"고고로 VIVA"}
+      {url:"../../images/scooter/m1.png", label:"고고로 S2"},
+      {url:"../../images/scooter/m2.png", label:"고고로 S2 플러스"},
+      {url:"../../images/scooter/m3.png", label:"고고로 2 유틸리티"},
+      {url:"../../images/scooter/m4.png", label:"고고로 VIVA"}
     ];
   -
     var describesOne = [
@@ -52,7 +52,7 @@ block contents
       div.swiper-wrapper
         each val, index in motors
           div.swiper-slide 
-            .img-box(style={"background-image":"url("+require(val.url)+")"})
+            img.img-box(src=require(val.url))
             .b1=val.label
   .scooter-one(style={"background-image": `url(${require("../../images/scooter/img-scooter-home-banner.png")})`})
     .text-box
@@ -68,23 +68,23 @@ block contents
         .sub 고고로 S2
         .t1 초월하기 위해 태어났다
         a.link="더 알아보기 >"
-        .img(style={width: "343px", height: "223px", "background-image":`url(${require("../../images/scooter/S2ABS_EU_Indigo_03_Left_Side.png")})`})
+        .img(style={"background-image":`url(${require("../../images/scooter/m1.png")})`})
       .motor-link-wrap
         .sub 고고로 S2
         .t1 초월하기 위해 태어났다
         a.link="더 알아보기 >"
-        .img(style={width: "292px", height: "221px", "background-image":`url(${require("../../images/scooter/2plus_EU_White_03_Left_Side_20cm.png")})`})
+        .img(style={"background-image":`url(${require("../../images/scooter/m2.png")})`})
     div
       .motor-link-wrap
         .sub 고고로 2 유틸리티
         .t1 비즈니스를 위한 탁월한 선택
         a.link="더 알아보기 >"
-        .img(style={width: "357px", height: "193px", "background-image":`url(${require("../../images/scooter/L.psb-cmyk.png")})`})
+        .img(style={"background-image":`url(${require("../../images/scooter/m3.png")})`})
       .motor-link-wrap
         .sub 고고로 비바 키리스
         .t1 일상 속 작은 주행
         a.link="더 알아보기 >"
-        .img(style={width: "351px", height: "197px", "background-image":`url(${require("../../images/scooter/VivaKeyless_EU_LimeGrey_03_Left_Side-008.png")})`})
+        .img(style={"background-image":`url(${require("../../images/scooter/m4.png")})`})
 
 block page-script
   script(type="module" src=require("../../scripts/slider.ts"))
