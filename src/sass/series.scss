@@ -155,38 +155,49 @@
     max-width: 920px;
     margin: 0 auto;
     width: 100%;
+    .text-box {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      .t1 {
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+          var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+        letter-spacing: var(--unnamed-character-spacing--0-9);
+        color: var(--unnamed-color-1c1c1c);
+      }
+      .sub {
+        margin-top: 14px;
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-normal) 16px/24px
+          var(--unnamed-font-family-segoe-ui);
+        color: var(--unnamed-color-1c1c1c);
+        text-align: left;
+        letter-spacing: -0.8px;
+      }
+    }
     & > div {
+      position: relative;
       &.one {
+        left: -30px;
+        width: 540px;
+        top: 200px;
         width: 540px;
       }
       &.two {
+        right: -30px;
         width: 475px;
+        margin: -430px 0 0 auto;
+        .text-box {
+          margin: 20px 0 0 64px;
+        }
       }
       &.three {
         width: 414px;
+        margin: 240px 0 0 60px;
       }
       &.four {
         width: 414px;
-      }
-      .text-box {
-        margin-top: 20px;
-        padding-bottom: 20px;
-        .t1 {
-          font: var(--unnamed-font-style-normal) normal
-            var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
-            var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
-          letter-spacing: var(--unnamed-character-spacing--0-9);
-          color: var(--unnamed-color-1c1c1c);
-        }
-        .sub {
-          margin-top: 14px;
-          font: var(--unnamed-font-style-normal) normal
-            var(--unnamed-font-weight-normal) 16px/24px
-            var(--unnamed-font-family-segoe-ui);
-          color: var(--unnamed-color-1c1c1c);
-          text-align: left;
-          letter-spacing: -0.8px;
-        }
+        margin: -770px 0 0 auto;
       }
     }
   }
