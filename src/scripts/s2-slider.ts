@@ -1,9 +1,8 @@
 import Swiper, { Pagination } from "swiper"
-declare let motors: string
-type fromMotorsType = {
+declare let motors: {
   color: string
 }[]
-let fromMotors: fromMotorsType = JSON.parse(motors.replace(/&quot;/gi, `"`))
+
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".swiper-motors", {
     effect: "fade",
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       enabled: true,
       clickable: true,
       renderBullet: function (index, className) {
-        return `<span class="${className}" style="background-color:${fromMotors[index].color}"></span>`
+        return `<span class="${className}" style="background-color:${motors[index].color}"></span>`
       },
     },
   })
