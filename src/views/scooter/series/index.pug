@@ -94,16 +94,19 @@ block contents
   .series-four
     .t1 나만의 고고로 선택
     .s2-motors-wrapper
-      div
+      button(data-href="plus")
         img(src=require("../../../images/scooter/m2.png"))
         .t1 고고로 2 플러스
         .sub 모던한 라이딩의 새로운 기준
         .colors
           span(style={"background-color":"#E5E5E5"})
           span(style={"background-color":"#474747"})
-      div
+      button(data-href="utility")
         img(src=require("../../../images/scooter/m2.png"))
         .t1 고고로 2 유틸리티
         .sub 비즈니스를 위한 이동
         .colors
           span(style={"background-color":"#474747"})
+
+block page-script
+  script(type="module" src=require("../../../scripts/series.ts"))
