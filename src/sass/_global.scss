@@ -1,0 +1,59 @@
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+img {
+  max-width: 100%;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+.inactive {
+  width: 100%;
+  & > div {
+    background: linear-gradient(-45deg, #efefef, #9a9a9a, #fdfdfd, #929292);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    color: transparent;
+    max-width: 300px;
+  }
+}
+#response {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

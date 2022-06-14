@@ -9,6 +9,7 @@ const entryObject = files.reduce((obj, file) => {
   obj[filename] = file
   return obj
 }, {})
+const variables = require("./variables.js")
 
 const devMode =
   process.env.NODE_ENV === "production" ? "production" : "development"
@@ -69,11 +70,7 @@ module.exports = {
           embedFilters: {
             escape: true,
           },
-          data: {
-            isDev,
-            title: "고고로 소개페이지",
-            description: "가장 진보된 스마트 스쿠터. 고고로",
-          },
+          data: { ...variables, isDev },
           method: "render",
         },
       },

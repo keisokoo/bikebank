@@ -67,20 +67,19 @@ block contents
   .s2-seven
     -
       var motors = [
-        {url:"../../../images/scooter/m1.png", label:"고고로 S2", link: "/scooter/s2"},
-        {url:"../../../images/scooter/m2.png", label:"고고로 S2 플러스", link: "/scooter/s2"},
-        {url:"../../../images/scooter/m3.png", label:"고고로 2 유틸리티", link: "/scooter/s2"},
-        {url:"../../../images/scooter/m4.png", label:"고고로 VIVA", link: "/scooter/s2"}
+        {url:"../../../images/scooter/m1.png", color:"blue"},
+        {url:"../../../images/scooter/m2.png", color:"black"},
+        {url:"../../../images/scooter/m3.png", color:"white"},
       ];
+  script.
+    let motors = '#{JSON.stringify(motors)}'
   .motors-wrapper
     div.swiper-motors
       div.swiper-wrapper
         each val, index in motors
           div.swiper-slide 
-            a(href=val.link)
-              img.img-box(src=require(val.url))
-              .b1=val.label
-      .swiper-pagination
+            img.img-box(src=require(val.url))
+    .swiper-pagination
 
 block page-script
   script(type="module" src=require("../../../scripts/s2-slider.ts"))

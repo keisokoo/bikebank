@@ -3,3 +3,4 @@ dist/
 .cache
 .parcel-cache
 yarn-error.log
+.DS_Store 

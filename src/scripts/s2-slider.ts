@@ -1,17 +1,26 @@
 import Swiper, { Pagination } from "swiper"
-
+declare let motors: string
+type fromMotorsType = {
+  color: string
+}[]
+let fromMotors: fromMotorsType = JSON.parse(motors.replace(/&quot;/gi, `"`))
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".swiper-motors", {
-    direction: "horizontal",
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
     slidesPerView: 1,
     spaceBetween: 16,
-    loop: false,
+    loop: true,
     modules: [Pagination],
     pagination: {
       el: ".swiper-pagination",
-      type: "bullets",
       enabled: true,
       clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}" style="background-color:${fromMotors[index].color}"></span>`
+      },
     },
   })
 })
