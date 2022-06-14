@@ -1,0 +1,109 @@
+extends ../../../includes/layout.pug
+
+block styles
+  link(rel="stylesheet", href=require("../../../sass/series.scss"))
+
+block contents
+  .series-one(style={"background-image":`url(${require("../../../images/scooter/series/video-kv-hero-placeholder.png")})`})
+    .text-box
+      .sub 아주 새로운
+      .t1 고고로 2 시리즈
+  .series-two
+    div
+      .t1 고고로 2 시리즈
+      a.link 구매문의
+  .series-three
+    .separated-bg(style={"background-image":`url(${require("../../../images/scooter/series/img-series-story-bg.png")})`})
+    .three-wrap
+      .describes-one <span>정제된 이동의 미래.</span> 다양한 도시로 떠나는 여정을 위해 다양한<br/>주행 스타일을 만드세요. 출발은 단순히 도착하는 것이 아니라 일상을 즐길 가치가 있는 여행이 됩니다.
+      .series-spec
+        img(src=require("../../../images/scooter/series/img-series-ksp.png"))
+        .spec-box
+          div
+            .point 125cc
+            .label 등급
+          div
+            .point 170km
+            .label 범위
+          div
+            .point 7.0kw
+            .label 최대전력
+          div
+            .point SBS/ABS
+            .label 브레이크 시스템
+      .describes-two
+        .t1 신중하게 최적화된 주행 경험
+        .sub 더 부드럽고 세련된 승차감. 세련되고 아름다운 것부터 거친 것까지<br/>Gogoro 2 시리즈는 원하는 모든 라이딩 요구 사항을 충족하기 위해 원하는 모델을 선택할 수 있습니다.
+      .part-details
+        .one
+          img(src=require("../../../images/scooter/series/img-series-feature-1.png"))
+          .text-box
+            .t1 뛰어난 파워와 자신감
+            .sub 수냉식 기술이 적용된 고효율 모터, 탁월한 출력과 주행 범위로<br/>당신은 앞으로 나아갈 수 있습니다.
+        .two
+          img(src=require("../../../images/scooter/series/img-series-feature-2.png"))
+          .text-box
+            .t1 부드러운 트렌스미션 옵션
+            .sub 두 가지 트렌스미션 옵션 중에 선택하세요.<br/>조용하고 편안한 카본 벨트, 안전하고 강한 골드 체인
+        .three
+          img(src=require("../../../images/scooter/series/img-series-feature-3.png"))
+          .text-box
+            .t1 제동, 정확한 제어
+            .sub 표준 구성 SBS, 고급 옵션 ABS의 정확한 제<br/>어 기술로 안전한 라이딩을 하세요.
+        .four
+          img(src=require("../../../images/scooter/series/img-series-feature-4.png"))
+          .text-box
+            .t1 편안하고 아름다운 주차
+            .sub 기하학적 디자인으로 만들어진 인체공학적 레버로 쉽게 주차할 수 있습니다.
+      .describes-three
+        .t1 미려한 동작, 감각적인 이해
+        .sub 새로운 세대의 이동이 시작됩니다. 의도적으로 드러내지 않아도 부드럽게 절제된 아름다움이 잘 나타납니다. 도시의 거리에서 움직이는 빛이 되어보세요.
+      .grid-box
+        div
+          img(src=require("../../../images/scooter/series/img-series-gallery-1.png"))
+        div
+          img(src=require("../../../images/scooter/series/img-series-gallery-2.png"))
+        div
+          img(src=require("../../../images/scooter/series/img-series-gallery-3.png"))
+        div
+          img(src=require("../../../images/scooter/series/img-series-gallery-4.png"))
+        div
+          img(src=require("../../../images/scooter/series/img-series-gallery-5.png"))
+      .user-experience(style={"background-image":`url(${require("../../../images/scooter/series/img-experience-1.png")})`})
+        .t1 눈부신, 당신이 보는 것
+        .text-box
+          .t1 맞춤형 색상, 커스텀
+          .sub 고고로 앱을 열고 대시보드의 컬러 시스템을 자유롭게 설정하고<br/>기분, 의상, 개성에 따른 컬러로 나만의 스타일을 보여주세요.
+      .gogoro-app
+        .t1 고고로 어플리케이션
+        .sub 스마트 드라이빙 기술은 일상적인 주행을 보다 안전하고 간단하며 쉽게 만들어줍니다.
+        a.link="더 알아보기 >"
+      .extra-describes
+        div
+          img(src=require("../../../images/scooter/series/img-series-sub-feature-1.png"))
+          .t1 생체인증, 오직 당신만이
+          .sub 걱정하지 마세요. 지문, 얼굴 또는 음성 인식으로 차량을 시동하여 도난 방지 보안을 더욱 강화하세요.
+        div
+          img(src=require("../../../images/scooter/series/img-series-sub-feature-2.png"))
+          .t1 레인 스마트 모드
+          .sub 날씨 정보에 실시간으로 연결하여 레인 스마트 모드가 활성화되면 자동으로 토크 출력을 조정하여 미끄러운 도로 조건에 적응합니다.
+        div
+          img(src=require("../../../images/scooter/series/img-series-sub-feature-1.png"))
+          .t1 리버스 어시스트
+          .sub 버튼을 누르면 차가 천천히 후진합니다. 주차공간이 아무리 붐비더라도 자유롭게 탈출할 수 있습니다.
+  .series-four
+    .t1 나만의 고고로 선택
+    .s2-motors-wrapper
+      div
+        img(src=require("../../../images/scooter/m2.png"))
+        .t1 고고로 2 플러스
+        .sub 모던한 라이딩의 새로운 기준
+        .colors
+          span(style={"background-color":"#E5E5E5"})
+          span(style={"background-color":"#474747"})
+      div
+        img(src=require("../../../images/scooter/m2.png"))
+        .t1 고고로 2 유틸리티
+        .sub 비즈니스를 위한 이동
+        .colors
+          span(style={"background-color":"#474747"})
