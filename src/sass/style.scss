@@ -4,3 +4,97 @@
 @import "./nav";
 @import "./main";
 @import "./footer";
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: #fff;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  &[disabled] {
+    display: none;
+  }
+  &[active] {
+    display: flex;
+  }
+  .modal-container {
+    max-width: 1120px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 278px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    position: relative;
+    button.close-modal {
+      position: absolute;
+      top: 43px;
+      right: 50px;
+      width: 74px;
+      height: 74px;
+    }
+    .title-name-box {
+      @include titleBox();
+      padding-left: 55px;
+      padding-right: 55px;
+      background-color: #e2e2e2;
+    }
+    .details {
+      @include specBox();
+    }
+    .grid-box {
+      display: grid;
+      grid-template:
+        "A B" 306px
+        "C C" 370px
+        "D E" 306px;
+      & > div:nth-child(1) {
+        grid-area: A;
+      }
+      & > div:nth-child(2) {
+        grid-area: B;
+      }
+      & > div:nth-child(3) {
+        grid-area: C;
+      }
+      & > div:nth-child(4) {
+        grid-area: D;
+      }
+      & > div:nth-child(5) {
+        grid-area: E;
+      }
+    }
+  }
+  .describes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px 72px;
+    background-color: #f9f9f9;
+    & > div {
+      width: 265px;
+    }
+    .t1 {
+      text-align: center;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+        var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-9);
+      color: var(--unnamed-color-1c1c1c);
+    }
+    .sub {
+      margin-top: 10px;
+      text-align: center;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) 16px/24px
+        var(--unnamed-font-family-segoe-ui);
+      color: var(--unnamed-color-1c1c1c);
+    }
+  }
+}
