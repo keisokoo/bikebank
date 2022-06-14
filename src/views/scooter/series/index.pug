@@ -69,7 +69,8 @@ block contents
           .img(style={"background-image": `url(${require("../../../images/scooter/series/img-series-gallery-4.png")})`})
         div
           .img(style={"background-image": `url(${require("../../../images/scooter/series/img-series-gallery-5.png")})`})
-      .user-experience(style={"background-image":`url(${require("../../../images/scooter/series/img-experience-1.png")})`})
+      .user-experience
+        img(src=require("../../../images/scooter/series/img-experience-1.png"))
         .t1 눈부신, 당신이 보는 것
         .text-box
           .t1 맞춤형 색상, 커스텀
@@ -94,15 +95,15 @@ block contents
   .series-four
     .t1 나만의 고고로 선택
     .s2-motors-wrapper
-      button(data-href="plus")
-        img(src=require("../../../images/scooter/m2.png"))
+      div
+        img(src=require("../../../images/scooter/m2.png") data-href="plus")
         .t1 고고로 2 플러스
         .sub 모던한 라이딩의 새로운 기준
         .colors
           span(style={"background-color":"#E5E5E5"})
           span(style={"background-color":"#474747"})
-      button(data-href="utility")
-        img(src=require("../../../images/scooter/m2.png"))
+      div
+        img(src=require("../../../images/scooter/m3.png") data-href="utility")
         .t1 고고로 2 유틸리티
         .sub 비즈니스를 위한 이동
         .colors

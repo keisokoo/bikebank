@@ -251,4 +251,148 @@
       grid-area: E;
     }
   }
+  .user-experience {
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    & > .t1 {
+      position: absolute;
+      top: 57px;
+      left: 50%;
+      transform: translateX(-50%);
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) 32px/38px
+        var(--unnamed-font-family-segoe-ui);
+      letter-spacing: -1.6px;
+    }
+    .text-box {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 54px;
+      .t1 {
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+          var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+        letter-spacing: var(--unnamed-character-spacing--0-9);
+      }
+      .sub {
+        letter-spacing: -0.8px;
+        margin-top: 14px;
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-normal) 16px/24px
+          var(--unnamed-font-family-segoe-ui);
+      }
+    }
+  }
+  .gogoro-app {
+    margin: 70px auto 70px;
+    text-align: center;
+    .t1 {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) 32px/38px
+        var(--unnamed-font-family-segoe-ui);
+      color: var(--unnamed-color-1c1c1c);
+    }
+    .sub {
+      margin-top: 13px;
+      margin-bottom: 38px;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) /
+        var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-9);
+      color: var(--unnamed-color-1c1c1c);
+    }
+    .link {
+      display: block;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) /
+        var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-9);
+      color: var(--unnamed-color-0077ff);
+    }
+  }
+  .extra-describes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 27px;
+    width: 920px;
+    & > div {
+      flex: 1;
+    }
+    .t1 {
+      margin-top: 30px;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+        var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-9);
+      color: var(--unnamed-color-1c1c1c);
+    }
+    .sub {
+      margin-top: 14px;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) 16px/24px
+        var(--unnamed-font-family-segoe-ui);
+      color: var(--unnamed-color-1c1c1c);
+      letter-spacing: -0.8px;
+    }
+  }
+}
+.series-four {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 151px 0 177px;
+  text-align: center;
+  & > .t1 {
+    margin-bottom: 82px;
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+      var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+    letter-spacing: var(--unnamed-character-spacing--0-9);
+    color: var(--unnamed-color-1c1c1c);
+    margin-bottom: 16px;
+  }
+  .s2-motors-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+    .t1 {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
+        var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-9);
+      color: var(--unnamed-color-1c1c1c);
+      margin-bottom: 16px;
+    }
+    .sub {
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) 16px/24px
+        var(--unnamed-font-family-segoe-ui);
+      color: var(--unnamed-color-1c1c1c);
+      letter-spacing: -0.8px;
+      margin-bottom: 23px;
+    }
+  }
+  img {
+    width: 340px;
+    margin: 0 auto 26px;
+    cursor: pointer;
+  }
+  .colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    & > span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid #bfbfbf;
+    }
+  }
 }

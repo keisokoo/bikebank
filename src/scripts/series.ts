@@ -11,7 +11,9 @@ window.addEventListener("popstate", (event) => {
   }
 })
 document.addEventListener("DOMContentLoaded", async () => {
-  const modalButton = document.querySelectorAll(".s2-motors-wrapper > button")
+  const modalButton = document.querySelectorAll(
+    ".s2-motors-wrapper img[data-href]"
+  )
   for (let i = 0; i < modalButton.length; i++) {
     modalButton[i].addEventListener("click", (e) => {
       const target = e.currentTarget as HTMLButtonElement
