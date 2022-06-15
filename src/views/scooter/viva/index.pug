@@ -17,7 +17,7 @@ block contents
       img(src=require("../../../images/play.svg"))
       div 전체 비디오 보기
   .viva-five(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-experience-bg.png")})`})
-    img(src=require("../../../images/scooter/viva/img-divider-experience-scooter.png"))
+    .img(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-experience-scooter.png")})`})
     .text-box
       .sub 바로
       .t1 최고
@@ -49,7 +49,9 @@ block contents
       var describesOne = [
         {url:"../../../images/scooter/viva/img-hardware-1.png", title:"21.6L 대용량 수납공간"},
         {url:"../../../images/scooter/viva/img-hardware-2.png", title:"스마트 배터리"},
-        {url:"../../../images/scooter/viva/img-hardware-3.png", title:"SBS 싱크로나이즈드 브레이크 시스템*"},
+        {url:"../../../images/scooter/viva/img-hardware-3.png", title:"SBS 싱크로나이즈드\n브레이크 시스템*"},
+        {url:"../../../images/scooter/viva/img-hardware-4.png", title:"풀 LED 조명 시스템"},
+        {url:"../../../images/scooter/viva/img-hardware-5.png", title:"내구성 높은 기술"},
       ];
     div(class=`swiper-describe-one swiper-box`)
       button.slide-control-btn.prev
@@ -63,12 +65,12 @@ block contents
             .text-box
               .t1=val.title
   .viva-nine(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-design-bg.png")})`})
-    img(src=require("../../../images/scooter/viva/img-divider-design-scooter.png"))
+    .img(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-design-scooter.png")})`})
     .text-box
       .sub 작을 뿐만 아니라
       .t1 아주 매력적인
   .viva-ten
-    .t1 사람들의 시선을 사로잡는 여정은<br/>아주 훌륭합니다!
+    .t1 사람들의 주목을 받는 이유는?<br/>세련된 움직임으로 시선을 사로잡는다!
     .grid-box
       div
         .one.img(style={"background-image":`url(${require("../../../images/scooter/viva/img-design-1.png")})`})
@@ -91,7 +93,7 @@ block contents
             .sub 선형 랜덤 테일라이트
             .t1 어둠을 가르는 깨끗한 선.<br/>길을 따라가는 눈, 당신을<br/>바라보는 것만으로도 충분합니다!
   .viva-eleven(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-features-bg.png")})`})
-    img(src=require("../../../images/scooter/viva/img-divider-features-scooter.png"))
+    .img(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-features-scooter.png")})`})
     .text-box
       .sub 세심한
       .t1 매우 스마트한 생활
@@ -118,6 +120,47 @@ block contents
           .text-box
             .sub 당신 차량에 대한 모든 것이 손 안에 있습니다.
             .t1 Gogoro® 앱을 열고 가장 가까운<br/>GoStation® 배터리 교체 스테이션을<br/>찾거나 기본 차량 상태 진단을<br/>하거나 유지 보수를 예약하세요.
-
+  .viva-thirteen(style={"background-image":`url(${require("../../../images/scooter/viva/20220523_184838.png")})`})
+    .title-box
+      img(src=require("../../../images/scooter/viva/icon-gostation.png"))
+      .t1 스왑 앤 고
+  .viva-fourteen(style={"background-image":`url(${require("../../../images/scooter/viva/gogoro-network.png")})`})
+  .viva-fifteen
+    .viva-motors-wrapper
+      img(src=require("../../../images/scooter/viva/img-series-model-keyless.png"))
+      .t1 고고로 비바
+      .sub 열쇠가 없는
+      .colors
+        span(style={"background-color":"#E1E124"})
+        span(style={"background-color":"#41447A"})
+        span(style={"background-color":"#DCDCDC"})
+        span(style={"background-color":"#FDCAD4"})
+    .details
+      .t1 디테일
+      .details-box
+        div
+          .box-row
+            .s1 길이 x 너비 x 높이 (백미러 제외)
+            .d1 1,770 x 725 x 1,093mm
+          .box-row
+            .s1 휠베이스
+            .d1 1,235mm
+          .box-row
+            .s1 안장 높이
+            .d1 745mm
+          .box-row
+            .s1 무게 (비어 있음/배터리 포함)
+            .d1 94/112kg
+        div
+          .box-row
+            .s1 최대 전력
+            .d1 6.0kW @3,000rpm
+          .box-row
+            .s1 최대 토크 (모터/휠)
+            .d1 21 / 150Nm @ 0-2,500rpm
+          .box-row
+            .s1 등판성
+            .d1 30%(17°): 35km/h#[br]20%(11°): 45km/h#[br]10%(6°): 65km/h
+      .extra-describes * 이 표는 참고용이며 테스트 시나리오에 따라 결과가 달라질 수 있습니다.#[br]* 자세한 정보는 고객센터를 통해 확인해주시기 바랍니다.
 block page-script
   script(type="module" src=require("../../../scripts/viva.ts"))
