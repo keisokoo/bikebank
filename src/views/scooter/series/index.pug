@@ -4,63 +4,8 @@ block styles
   link(rel="stylesheet", href=require("../../../sass/series.scss"))
 
 block contents
-  #modal-plus.modal-wrap(disabled)
-    .modal-container
-      button.close-modal
-        img(src=require("../../../images/close-modal.svg"))
-      img(src=require("../../../images/scooter/series/plus/img-db-scooter-main.png"))
-      .title-name-box
-        div
-          .t1 고고로 2 PLUS
-          a.link 구매문의
-      .describes
-        div
-          .t1 보안 업그레이드
-          .sub 내장형 타이어 공기압 감지<br/>프론트, 리어 듀얼 디스크 브레이크
-        div
-          .t1 슈페리어 스타일
-          .sub 금속 질감 페인트<br/>금속 자동차 로고<br/>이중 광택 처리
-        div
-          .t1 감각적인 경험
-          .sub 벨트 드라이브<br/>쉬운 유지 보수<br/>다기능 보관함
-      .grid-box
-        div
-          img(src=require("../../../images/scooter/series/plus/img-db-gallery-1.png"))
-        div
-          img(src=require("../../../images/scooter/series/plus/img-db-gallery-2.png"))
-        div
-          img(src=require("../../../images/scooter/series/plus/img-db-gallery-3.png"))
-        div
-          img(src=require("../../../images/scooter/series/plus/img-db-gallery-4.png"))
-        div
-          img(src=require("../../../images/scooter/series/plus/img-db-gallery-5.png"))
-      .details
-        .t1 디테일
-        .details-box
-          div
-            .box-row
-              .s1 길이 x 너비 x 높이 (백미러 제외)
-              .d1 1,880 x 670 x 1,090mm
-            .box-row
-              .s1 휠베이스
-              .d1 1,306mm
-            .box-row
-              .s1 안장 높이
-              .d1 750mm
-            .box-row
-              .s1 무게 (비어 있음/배터리 포함)
-              .d1 104/122kg
-          div
-            .box-row
-              .s1 최대 전력
-              .d1 7.0kW @3,000rpm
-            .box-row
-              .s1 최대 토크 (모터/휠)
-              .d1 26.6 / 196Nm @ 0-2,500rpm
-            .box-row
-              .s1 등판성
-              .d1 30%(17°): 30km/h<br/>20%(11°): 40km/h<br/>10%(6°): 60km/h
-        .extra-describes * 이 표는 참고용이며 테스트 시나리오에 따라 결과가 달라질 수 있습니다.<br/>* 자세한 정보는 고객센터를 통해 확인해주시기 바랍니다.
+  +modalPlus()
+  +modalUtility()
           
   .series-one(style={"background-image":`url(${require("../../../images/scooter/series/video-kv-hero-placeholder.png")})`})
     .text-box
