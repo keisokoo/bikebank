@@ -9,19 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-describe-one>.slide-control-btn.prev",
     },
     slidesPerView: "auto",
-    spaceBetween: 30,
+    spaceBetween: 34,
     loop: false,
     centeredSlides: true,
-    breakpoints: {
-      300: {
-        spaceBetween: 8,
-      },
-      640: {
-        spaceBetween: 30,
-      },
-      1048: {
-        spaceBetween: 96,
-      },
-    },
   })
 })

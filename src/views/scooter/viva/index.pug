@@ -1,6 +1,7 @@
 extends ../../../includes/layout.pug
 
 block styles
+  link(rel="stylesheet" href=require("../../../../node_modules/swiper/swiper-bundle.min.css"))
   link(rel="stylesheet", href=require("../../../sass/viva.scss"))
 
 block contents
@@ -61,5 +62,11 @@ block contents
             img.img-box(src=require(val.url))
             .text-box
               .t1=val.title
+  .viva-nine(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-design-bg.png")})`})
+    img(src=require("../../../images/scooter/viva/img-divider-design-scooter.png"))
+    .text-box
+      .sub 작을 뿐만 아니라
+      .t1 아주 매력적인
+
 block page-script
   script(type="module" src=require("../../../scripts/viva.ts"))
