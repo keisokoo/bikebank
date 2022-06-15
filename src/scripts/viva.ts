@@ -2,7 +2,6 @@ import Swiper, { Navigation } from "swiper"
 
 document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".swiper-describe-one", {
-    // Optional parameters
     direction: "horizontal",
     modules: [Navigation],
     navigation: {

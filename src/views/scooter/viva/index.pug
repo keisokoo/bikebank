@@ -40,10 +40,26 @@ block contents
             .t1 큰 것이 좋나요? 더 극단적으로<br/>작습니다. 복잡함은 이제 그만!<br/>단순하게, 삶을 행복과<br/>기쁨으로 채우세요.
   .viva-seven(style={"background-image":`url(${require("../../../images/scooter/viva/back.png")})`})
     .text-box
-      .sub 바로
-      .t1 최고
+      .sub 과소평가되지 않으며
+      .t1 매우 의미있는
   .viva-eight
     .t1 사람들의 시선을 사로잡는 여정은<br/>아주 훌륭합니다!
-
+    -
+      var describesOne = [
+        {url:"../../../images/scooter/viva/img-hardware-1.png", title:"21.6L 대용량 수납공간"},
+        {url:"../../../images/scooter/viva/img-hardware-2.png", title:"스마트 배터리"},
+        {url:"../../../images/scooter/viva/img-hardware-3.png", title:"SBS 싱크로나이즈드 브레이크 시스템*"},
+      ];
+    div(class=`swiper-describe-one swiper-box`)
+      button.slide-control-btn.prev
+        img(src=require("../../../images/prev_arrow.svg"))
+      button.slide-control-btn.next
+        img(src=require("../../../images/next_arrow.svg"))
+      div.swiper-wrapper
+        each val, index in describesOne
+          div.swiper-slide 
+            img.img-box(src=require(val.url))
+            .text-box
+              .t1=val.title
 block page-script
   script(type="module" src=require("../../../scripts/viva.ts"))
