@@ -4,7 +4,9 @@
 @import "./nav";
 @import "./main";
 @import "./footer";
-
+#app {
+  font-size: 0px;
+}
 .modal-wrap {
   position: fixed;
   top: 0;

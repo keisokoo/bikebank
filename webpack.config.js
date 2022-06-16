@@ -20,7 +20,7 @@ module.exports = {
     path: path.join(__dirname, "dist/"),
     publicPath: "/",
     filename: "assets/js/[name].[contenthash:8].js",
-    clean: true,
+    clean: false,
   },
   entry: {
     ...entryObject,

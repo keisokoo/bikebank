@@ -1,0 +1,147 @@
+@import "./variables";
+
+.network-one {
+  width: 100%;
+  @include backgroundInit();
+  height: 904px;
+  .text-box {
+    text-align: center;
+    padding: 76px 0 0 0;
+    .t1 {
+      letter-spacing: -2.9px;
+      color: #12f159;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) 58px/70px
+        var(--unnamed-font-family-segoe-ui);
+    }
+    .sub {
+      margin-top: 27px;
+      color: #8a8a8a;
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-normal) var(--unnamed-font-size-22) / 34px
+        var(--unnamed-font-family-segoe-ui);
+      letter-spacing: var(--unnamed-character-spacing--0-55);
+    }
+  }
+}
+.network-two {
+  padding: 159px 0 255px;
+  width: 100%;
+  background-color: #62d5fd;
+  display: flex;
+  flex-direction: column;
+  gap: 190px;
+  text-align: center;
+  & > div {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 454px;
+    &:nth-child(3) {
+      max-width: 654px;
+    }
+  }
+  .t1 {
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-bold) 44px/53px
+      var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-1a416e);
+    letter-spacing: -2.2px;
+  }
+  .sub {
+    margin-top: 17px;
+    margin-bottom: 24px;
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-normal) var(--unnamed-font-size-20) /
+      var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-1a416e);
+    color: #1a416e;
+    letter-spacing: 0px;
+  }
+}
+.network-three {
+  width: 100%;
+  padding: 180px 0 299px;
+  background-color: #323237;
+  color: #ffffff;
+  text-align: center;
+  & > .t1 {
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-bold) 44px/53px
+      var(--unnamed-font-family-segoe-ui);
+    letter-spacing: -2.2px;
+  }
+  & > .sub {
+    margin-top: 38px;
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-normal) var(--unnamed-font-size-20) /
+      var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
+    letter-spacing: var(--unnamed-character-spacing-0);
+  }
+  .describes-wrap {
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 50px;
+    margin: 90px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    .describes-row {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      & > div {
+        max-width: 400px;
+        width: 100%;
+      }
+      .t1 {
+        margin: 20px auto;
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-bold) var(--unnamed-font-size-20) /
+          var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
+        letter-spacing: var(--unnamed-character-spacing-0);
+      }
+      .sub {
+        letter-spacing: 0px;
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-normal) var(--unnamed-font-size-20) /
+          var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
+        letter-spacing: var(--unnamed-character-spacing-0);
+      }
+    }
+  }
+}
+.network-four {
+  width: 100%;
+  padding: 119px 0 40px;
+  background-color: #eeeeee;
+  height: 360px;
+  text-align: center;
+  .t1 {
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-bold) 52px/62px
+      var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-1c1c1c);
+    text-align: center;
+    letter-spacing: -2.6px;
+    color: #1c1c1c;
+  }
+  .link {
+    display: block;
+    font: var(--unnamed-font-style-normal) normal
+      var(--unnamed-font-weight-normal) var(--unnamed-font-size-22) /
+      var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-0077ff);
+    text-align: center;
+    letter-spacing: -1.1px;
+    color: #0077ff;
+    margin-top: 31px;
+  }
+}
+.network-five {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  font-size: 0px;
+}
