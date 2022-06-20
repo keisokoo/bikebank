@@ -1,5 +1,7 @@
 @import "./variables";
-
+#app {
+  font-size: 0px;
+}
 .network-one {
   width: 100%;
   @include backgroundInit();

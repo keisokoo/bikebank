@@ -1,4 +1,18 @@
 extends ../../includes/layout.pug
 
+block styles
+  link(rel="stylesheet" href=require("../../sass/customer.scss"))
+
 block contents
-  div h...2
+  .customer-one(style={"background-image":`url(${require("../../images/customer/1.png")})`})
+    .text-box 
+      .t1 고고로 고객지원
+      a.phone(href="tel:15229008") 1522-9008
+  .customer-two
+    .text-box
+      .t1 자주묻는질문
+      a.link="더 알아보기 >"
+  .customer-three(style={"background-image":`url(${require("../../images/customer/2.png")})`})
+    .text-box
+      .t1 GoStation® 배터리 스왑 스테이션이 Gogoro를 주행을 기다리고 있습니다!
+      a.link="고스테이션 위치 >"

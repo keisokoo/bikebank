@@ -1,0 +1,28 @@
+extends ../../../includes/layout.pug
+
+block styles
+  link(rel="stylesheet" href=require("../../../../node_modules/swiper/swiper-bundle.min.css"))
+  link(rel="stylesheet" href=require("../../../sass/news.scss"))
+
+block contents 
+  .news-divide
+    .news-details-one(style={"background-image":`url(${require("../../../images/recent/top2.png")})`})
+      .text-box
+        .t1 원하는 대로<br/>탈 수 있어요.
+        .sub 내게 맞는 합리적인 이용료를 선택하세요.
+    .news-details-two
+      .text-box
+        .t1 다양한 요금제,<br/>원하는 대로 탈 수 있어요.
+        .sub 스테이션 요금제 소식
+    .news-details-contents
+      div 
+        p 고스테이션의 배터리 서비스 요금제는 라이더가 필요로 하는 양에 맞는 조건을 제공합니다.  고고로 네트워크는 스마트 스쿠터를 이용하는 라이더에게 합리적인 가격으로 배터리 교체 및 관리 서비스를 진행합니다. 고고로 전용 APP을 이용하여 월 단위로 결제 가능하며, 다양한 옵션을 선택할 수 있습니다. 
+        br
+        p 주변 고스테이션의 위치를 반드시 확인한 후 가입을 원하는 라이더는 APP을 설치하여 회원가입을 진행할 수 있습니다. 추가적인 문의사항이 있으신 분은 고객센터로 연락바랍니다.
+        br
+        img(src=require("../../../images/scooter/viva/img-series-model-keyless.png") style={"display":"block","margin":"81px auto 43px", "text-align":"center"})
+        p(style={"display":"block","margin":"0 auto ", "text-align":"center"}) <span class="point">0km</span><span class="unit">/월</span>
+        img(src=require("../../../images/recent/details/2-1.png") style={"display":"block","margin":"7px auto 78px", "text-align":"center"})
+        div
+          a.link(href="/customer" style={"height":"55px", "width":"197px","margin":"7px auto 78px", "text-align":"center"}) 고객센터
+      

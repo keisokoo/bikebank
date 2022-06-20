@@ -1,0 +1,24 @@
+extends ../../../includes/layout.pug
+
+block styles
+  link(rel="stylesheet" href=require("../../../../node_modules/swiper/swiper-bundle.min.css"))
+  link(rel="stylesheet" href=require("../../../sass/news.scss"))
+
+block contents 
+  .news-divide
+    .news-details-one(style={"background-image":`url(${require("../../../images/recent/top1.png")})`})
+      .text-box
+        .t1 BIMOS 2022<br/>부산국제모터쇼
+        .sub 좀 더 많은분들에게 고고로를 선보이는 기회!
+    .news-details-two
+      .text-box
+        .t1 고고로가 부산국제모터쇼에 참가합니다!
+        .sub 좀 더 많은분들에게 고고로를 선보이는 기회!
+    .news-details-contents
+      div 
+        p 부산국제모터쇼가 4년 만에 열립니다. 오는 7월 14일 프레스 데이를 시작으로 24일까지 11일간 부산 벡스코(BEXCO)에서 열립니다. 올해 10회를 맞은 이번 모터쇼에서는 승용차와 상용차를 비롯한 친환경 자동차, 특장차, 모터사이클, E-모빌리티 등 다양한 품목을 선보입니다.
+        br
+        p sE-모빌리티 구역에 설치되는 고고로의 전시부스에 방문하세요. 고고로의 배터리 교환 방식(Swap & Go)을 직접 체험하고, 고고로의 다양한 스마트 스쿠터를 만날 수 있습니다. Gogoro S2, Gogoro VIVA, Gogoro Plus, Gogoro Utility 등의 라인업이 선보일 예정입니다. 특히 S2와 VIVA 모델의 경우 국내에서 처음으로 공개되니 이 기회를 놓치지 마세요!
+        br
+        img(src=require("../../../images/recent/details/1-1.png"))
+      

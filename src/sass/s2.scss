@@ -1,5 +1,7 @@
 @import "./variables";
-
+#app {
+  font-size: 0;
+}
 .s2-one {
   @include backgroundInit();
   width: 100%;
@@ -106,9 +108,10 @@
 }
 
 .s2-five {
-  @include backgroundInit();
   width: 100%;
-  min-height: 1260px;
+  img {
+    width: 100%;
+  }
 }
 
 .s2-six {

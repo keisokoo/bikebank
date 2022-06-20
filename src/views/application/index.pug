@@ -1,0 +1,76 @@
+extends ../../includes/layout.pug
+
+block styles
+  link(rel="stylesheet" href=require("../../../node_modules/swiper/swiper-bundle.min.css"))
+  link(rel="stylesheet" href=require("../../sass/application.scss"))
+
+block contents
+  .application-one(style={"background-image":`url(${require("../../images/apps/top.png")})`})
+    .text-box
+      .sub IQ System 스마트 시스템
+      .t1 타면 탈수록 더 똑똑해집니다.
+  .application-two
+    .text-box
+      .t1 스마트 네트워크<br/>차량 제어
+      .sub 모든 것이 인터넷으로 연결되는 시대입니다.<br/>고고로는 지속가능하며 스마트한 네트워크를 통해<br/>미래 지향적인 서비스를 제공합니다.
+    .text-box
+      .t1 고고로 IQ System<br/>스마트 시스템
+      .sub 안전 모니터링, 지속적인 성능 최적화, 지능형 서비스 확장 등.<br/>미래 지향적인 지능형 기술을 적용합니다.
+  .application-three
+    .grid-box
+      div
+        .text-box
+          .t1 더 새롭고 직관적인
+          .sub 새로운 인터페이스를 만들어 정보를 한 눈에 볼 수 있고 여러 대의 차가 있어도 쉽게 관리할 수 있습니다.
+      div(style={"background-image": `url(${require("../../images/apps/m1.png")})`})
+      div(style={"background-image": `url(${require("../../images/apps/m2.png")})`})
+      div
+        .text-box
+          .t1 연결, 필드 확장
+          .sub 스쿠터에 원격 네트워크 서비스가 장착되어 차가 멀리 떨어져 있어도 휴대 전화를 사용하여 차량 상태, 원격 잠금 해제 및 위치를 수신할 수 있습니다.
+  .application-four
+    .title-box
+      .t1 당신의 손바닥 안에서<br/>전체 상황을 관리하세요
+      .sub 실용적인 도구, 직관적인 조작 및 차량 정보가 결합된 Gogoro 앱은<br/>주행 스타일에 부합하는 모바일 라이프를 쉽고 편리하게 만듭니다.
+    .apps
+      a(href="")
+        img(src=require("../../images/apps/img-badge-app-store.png"))
+      a(href="")
+        img(src=require("../../images/apps/img-badge-google-play.png"))
+  .application-five
+    .application-slide-wrap
+      button.slide-control-btn.prev
+        img(src=require("../../images/apps/l.svg"))
+      button.slide-control-btn.next
+        img(src=require("../../images/apps/r.svg"))
+      .swiper-application
+        .swiper-wrapper
+          .swiper-slide
+            img(src=require("../../images/apps/img-app-screen-1.png"))
+            .text-box
+              .t1 차세대 인터페이스
+              .sub 최적화 된 인터페이스로 보기 편하고 유용한 사용성을 제공합니다. 주차위치, 주행가능거리, 타이어 공기압, 차량 진단, 실제 차량 상태까지 한 눈에 전체 정보를 확인할 수 있도록 도와줍니다.
+          .swiper-slide
+            img(src=require("../../images/apps/img-app-screen-2.png"))
+            .text-box
+              .t1 차세대 인터페이스
+              .sub 최적화 된 인터페이스로 보기 편하고 유용한 사용성을 제공합니다. 주차위치, 주행가능거리, 타이어 공기압, 차량 진단, 실제 차량 상태까지 한 눈에 전체 정보를 확인할 수 있도록 도와줍니다.
+          .swiper-slide
+            img(src=require("../../images/apps/img-app-screen-3.png"))
+            .text-box
+              .t1 차세대 인터페이스
+              .sub 최적화 된 인터페이스로 보기 편하고 유용한 사용성을 제공합니다. 주차위치, 주행가능거리, 타이어 공기압, 차량 진단, 실제 차량 상태까지 한 눈에 전체 정보를 확인할 수 있도록 도와줍니다.
+          .swiper-slide
+            img(src=require("../../images/apps/img-app-screen-4.png"))
+            .text-box
+              .t1 차세대 인터페이스
+              .sub 최적화 된 인터페이스로 보기 편하고 유용한 사용성을 제공합니다. 주차위치, 주행가능거리, 타이어 공기압, 차량 진단, 실제 차량 상태까지 한 눈에 전체 정보를 확인할 수 있도록 도와줍니다.
+          .swiper-slide
+            img(src=require("../../images/apps/img-app-screen-5.png"))
+            .text-box
+              .t1 차세대 인터페이스
+              .sub 최적화 된 인터페이스로 보기 편하고 유용한 사용성을 제공합니다. 주차위치, 주행가능거리, 타이어 공기압, 차량 진단, 실제 차량 상태까지 한 눈에 전체 정보를 확인할 수 있도록 도와줍니다.
+    .swiper-pagination
+
+block page-script
+  script(type="module" src=require("../../scripts/application.ts"))

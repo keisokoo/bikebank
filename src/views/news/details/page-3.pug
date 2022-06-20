@@ -1,0 +1,48 @@
+extends ../../../includes/layout.pug
+
+block styles
+  link(rel="stylesheet" href=require("../../../../node_modules/swiper/swiper-bundle.min.css"))
+  link(rel="stylesheet" href=require("../../../sass/news.scss"))
+
+block contents 
+  .news-divide
+    .news-details-one(style={"background-image":`url(${require("../../../images/recent/top3.png")})`})
+      .text-box
+        .t1(style={color:"#ffffff"}) 고고로2 시리즈를<br/>위한 악세서리
+        .sub(style={color:"#ffffff"}) 차량의 색상을 가지고 재미있게 커스텀 해보세요.
+    .news-details-two
+      .text-box
+        .t1 고고로2 시리즈를 위한<br/>악세서리
+        .sub 좀 더 많은분들에게 고고로를 선보이는 기회!
+    .news-details-contents
+      div 
+        .cover-title 프론트 커버
+        .covers
+          div
+            img(src=require("../../../images/recent/cover/1.png"))
+            p 프론트커버<br/>빈티지 옐로우
+          div
+            img(src=require("../../../images/recent/cover/2.png"))
+            p 프론트커버<br/>패션 화이트
+          div
+            img(src=require("../../../images/recent/cover/3.png"))
+            p 프론트커버<br/>스카이 블루
+          div
+            img(src=require("../../../images/recent/cover/4.png"))
+            p 프론트커버<br/>그래피티 화이트
+          div
+            img(src=require("../../../images/recent/cover/5.png"))
+            p 프론트커버<br/>버블 블루
+          div
+            img(src=require("../../../images/recent/cover/6.png"))
+            p 프론트커버<br/>패션 네이비
+        .cover-title 바디 커버
+        .covers
+          div
+            img(src=require("../../../images/recent/cover/1.png"))
+            p 바디 커버<br/>스카이 블루
+          div
+            img(src=require("../../../images/recent/cover/2.png"))
+            p 바디 커버<br/>패션 네이비
+        .extra(style={"margin-top":"41px"}) * 위 사진은 참고용으로 실제 제품을 확인해주세요.
+        .extra * 자세한 정보는 고객센터를 통해 확인해주시기 바랍니다.

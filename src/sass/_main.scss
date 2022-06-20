@@ -29,6 +29,7 @@
     margin-top: 14px;
   }
   .m1 {
+    display: block;
     font: 18px;
     line-height: 22px;
     letter-spacing: -0.9px;
@@ -48,7 +49,8 @@
   align-items: flex-start;
   gap: 20px;
   margin-top: 20px;
-  & > div {
+  & > div,
+  & > a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +93,8 @@
   width: 100%;
   max-width: 1920px;
   margin: 20px auto 0;
-  & > div {
+  & > div,
+  & > a {
     position: relative;
     img {
       height: 674px;
