@@ -147,7 +147,8 @@
     .slide-control-btn {
       position: absolute;
       top: 0;
-      height: 668px;
+      bottom: 0;
+      // height: 668px;
       width: 60px;
       max-width: 300px;
       transition: opacity 0.3s;
