@@ -4,4 +4,8 @@ block styles
   link(rel="stylesheet" href=require("../../sass/go-station.scss"))
 
 block contents
-  div go-station
+  div#map
+
+block page-script
+  script(src="//dapi.kakao.com/v2/maps/sdk.js?libraries=services&appkey=4a55bf3078fdbcc25cbc85c44e2be418") 
+  script(src=require("../../scripts/map.ts"))
