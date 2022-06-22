@@ -407,6 +407,25 @@
         color: #fff;
       }
     }
+    @include media(768px) {
+      &.gogoro {
+        .text-box {
+          .t1 {
+            margin-bottom: 24px;
+          }
+          .sub {
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+    @include media(668px) {
+      &.gogoro {
+        img {
+          object-position: calc(50% + 15px) center;
+        }
+      }
+    }
   }
   @include media(1120px) {
     flex-direction: column;
