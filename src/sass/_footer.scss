@@ -53,4 +53,46 @@ footer {
       gap: 30px;
     }
   }
+
+  @media screen and (max-width: 916px) {
+    #footer-logo {
+      width: 255px;
+      height: auto;
+    }
+    .footer-inner {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    .footer-flex {
+      flex-wrap: wrap;
+      gap: 0px;
+      & > div {
+        margin-top: 70px;
+        padding-top: 24px;
+        border-top: 1px solid #878787;
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    padding: 80px 0;
+    #footer-logo {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .footer-flex {
+      .t1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+      a.link {
+        font-size: 18px;
+      }
+      & > div {
+        margin-top: 32px;
+        padding-top: 16px;
+        width: 100%;
+      }
+    }
+  }
 }

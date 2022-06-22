@@ -34,11 +34,47 @@ nav {
       color: rgb(0, 219, 157);
     }
   }
+  @include media(1120px) {
+    max-width: 100%;
+    min-height: 90px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: auto;
+    display: block;
+    a {
+      justify-content: flex-start;
+      text-align: left;
+    }
+  }
 }
 #menu {
   display: flex;
   align-items: center;
   gap: 62px;
+  @include media(1120px) {
+    position: absolute;
+    flex-direction: column;
+    bottom: 0;
+    transform: translateY(100%);
+    background: inherit;
+    gap: 8px;
+    & > a {
+      padding: 24px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    padding-bottom: 24px;
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &.active {
+      display: flex;
+    }
+  }
 }
 #nav-wrap {
   width: 100%;
@@ -47,4 +83,65 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  .mobile-only {
+    display: none;
+  }
+  @include media(1120px) {
+    .mobile-only {
+      display: flex;
+      height: 100%;
+      flex: 1;
+    }
+    flex-direction: column;
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      height: 90px;
+      width: 100%;
+      a {
+        display: block;
+        text-align: center;
+        flex: 1;
+      }
+    }
+    .burger {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      img {
+        margin-left: 90px;
+      }
+    }
+  }
+
+  @include media(768px) {
+    .mobile-only {
+      display: flex;
+      height: 100%;
+      flex: none;
+      width: 70px;
+      justify-content: center;
+    }
+    .burger {
+      img {
+        margin-left: 0;
+      }
+    }
+  }
+  @include media(500px) {
+    .mobile-only:last-child {
+      // display: none;
+    }
+    .mobile-only {
+      width: 40px;
+    }
+    .burger {
+      img {
+        width: 24px;
+        margin-left: 0;
+      }
+    }
+  }
 }

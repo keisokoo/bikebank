@@ -50,4 +50,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (id) {
     runModal(id)
   }
+  document.body.querySelector(".burger").addEventListener("click", () => {
+    console.log("a")
+    if (document.body.querySelector("#menu").classList.contains("active")) {
+      document.body.querySelector("#menu").classList.remove("active")
+    } else {
+      document.body.querySelector("#menu").classList.add("active")
+    }
+  })
 })

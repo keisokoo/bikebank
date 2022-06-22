@@ -2,12 +2,18 @@ mixin navTheme(color)
   nav(data-color=color)
     #nav-wrap
       #home
+        .mobile-only.burger
+          if color == 'black'
+            img(src=require("../images/burger.svg"))
+          else
+            img(src=require("../images/burger-black.svg"))
         a(href="/")
           if color == 'black'
             img(src=require("../images/logo.svg"))
           else
             img(src=require("../images/logo_black.svg"))
-      #menu
+        .mobile-only
+      #menu(style={"background-color":color})
         a(href="/scooter") 스마트 스쿠터
         a(href="/network") 고고로 네트워크
         a(href="/news") 최신소식
