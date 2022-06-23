@@ -8,12 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 16,
     loop: false,
     breakpoints: {
-      300: {
-        slidesPerView: 3,
-        spaceBetween: 8,
+      100: {
+        slidesPerView: 2,
+        spaceBetween: 32,
       },
-      640: {
+      500: {
         slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 4,
         spaceBetween: 16,
       },
       1048: {
@@ -35,14 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: false,
     centeredSlides: true,
     breakpoints: {
-      300: {
-        spaceBetween: 8,
+      100: {
+        centeredSlides: false,
+        spaceBetween: 32,
       },
-      640: {
-        spaceBetween: 30,
+      768: {
+        centeredSlides: false,
+        spaceBetween: 48,
       },
-      1048: {
-        spaceBetween: 96,
+      1180: {
+        centeredSlides: true,
+        spaceBetween: 56,
       },
     },
   })
@@ -58,14 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: false,
     centeredSlides: true,
     breakpoints: {
-      300: {
-        spaceBetween: 8,
+      100: {
+        centeredSlides: false,
+        spaceBetween: 32,
       },
-      640: {
-        spaceBetween: 30,
+      768: {
+        centeredSlides: false,
+        spaceBetween: 48,
       },
-      1048: {
-        spaceBetween: 96,
+      1180: {
+        centeredSlides: true,
+        spaceBetween: 56,
       },
     },
   })
@@ -82,14 +92,17 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: false,
     centeredSlides: true,
     breakpoints: {
-      300: {
-        spaceBetween: 8,
+      100: {
+        centeredSlides: false,
+        spaceBetween: 32,
       },
-      640: {
-        spaceBetween: 30,
+      768: {
+        centeredSlides: false,
+        spaceBetween: 48,
       },
-      1048: {
-        spaceBetween: 96,
+      1180: {
+        centeredSlides: true,
+        spaceBetween: 56,
       },
     },
   })

@@ -226,3 +226,13 @@ $inner-width: 1120px;
     letter-spacing: 0px;
   }
 }
+
+@mixin ft($fontSize, $lineHeight) {
+  font-size: $fontSize + px;
+  line-height: $lineHeight + px;
+}
+
+@mixin fl($fontSize, $lineHeight) {
+  font-size: $fontSize + px;
+  line-height: $lineHeight;
+}

@@ -1,9 +1,10 @@
 @import "./variables";
 .swiper-motors {
-  width: 1048px;
+  max-width: 1048px;
+  width: 100%;
   margin: 40px auto 34px;
   overflow: hidden;
-  @media screen and (max-width: 1048px) {
+  @include media(1048px) {
     width: 100%;
     padding: 0 24px;
   }
@@ -42,6 +43,10 @@
         var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /
         var(--unnamed-line-spacing-35) var(--unnamed-font-family-segoe-ui);
       color: var(--unnamed-color-1c1c1c);
+      @include media(500px) {
+        font-size: 16px;
+        white-space: nowrap;
+      }
     }
   }
 }
@@ -81,17 +86,94 @@
     letter-spacing: var(--unnamed-character-spacing--0-55);
     color: #8a8a8a;
   }
+  @include media(1120px) {
+    .sub {
+      @include ft(28, 34);
+    }
+    .t1 {
+      @include ft(64, 77);
+    }
+    .des {
+      @include ft(28, 40);
+    }
+  }
+  @include media(900px) {
+    .text-box {
+      padding-top: 78px;
+    }
+    height: 753px;
+    .sub {
+      @include ft(24, 26);
+    }
+    .t1 {
+      @include ft(50, 55);
+      margin-bottom: 16px;
+    }
+    .des {
+      @include ft(24, 32);
+    }
+  }
+  @include media(768px) {
+    height: 700px;
+    .text-box {
+      padding-top: 78px;
+    }
+    .sub {
+      @include ft(24, 26);
+    }
+    .t1 {
+      @include ft(44, 48);
+      margin-bottom: 16px;
+    }
+    .des {
+      @include ft(18, 32);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  @include media(600px) {
+    .des {
+      br {
+        display: none;
+      }
+      padding: 0 16px;
+    }
+  }
+  @include media(500px) {
+    height: 653px;
+    .text-box {
+      padding-top: 48px;
+    }
+    .sub {
+      @include ft(24, 26);
+    }
+    .t1 {
+      @include ft(44, 48);
+      margin-bottom: 16px;
+    }
+    .des {
+      @include ft(18, 32);
+      br {
+        display: none;
+      }
+      padding: 0 16px;
+    }
+  }
 }
 :root {
   --describe-slider-width: 766px;
   --describe-slider-sub: 577px;
   @media screen and (max-width: 1180px) {
+    --describe-slider-width: 640px;
+    --describe-slider-sub: 540px;
+  }
+  @media screen and (max-width: 768px) {
     --describe-slider-width: 440px;
     --describe-slider-sub: 440px;
   }
-  @media screen and (max-width: 640px) {
-    --describe-slider-width: 280px;
-    --describe-slider-sub: 280px;
+  @media screen and (max-width: 600px) {
+    --describe-slider-width: 80%;
+    --describe-slider-sub: 100%;
   }
 }
 .describe-wrapper {
@@ -121,6 +203,15 @@
       &.swiper-button-disabled {
         opacity: 0;
       }
+      @include media(768px) {
+        display: none;
+      }
+    }
+    @include media(1180px) {
+      padding: 0 64px;
+    }
+    @include media(768px) {
+      padding: 0 32px;
     }
   }
   &.last {
@@ -142,18 +233,55 @@
       white-space: pre-line;
     }
     .sub {
-      width: var(--describe-slider-sub);
+      max-width: var(--describe-slider-sub);
       font: var(--unnamed-font-style-normal) normal
         var(--unnamed-font-weight-normal) 28px/40px
         var(--unnamed-font-family-segoe-ui);
       color: var(--unnamed-color-1c1c1c);
       white-space: pre-line;
     }
+    @include media(1180px) {
+      margin: 149px 0 74px;
+      padding: 0 64px;
+      left: 0;
+      .t1 {
+        @include ft(42, 50);
+      }
+      .sub {
+        @include ft(24, 38);
+      }
+    }
+    @include media(1080px) {
+      width: 100%;
+    }
+    @include media(768px) {
+      padding: 0 32px;
+      margin: 100px auto 50px;
+      .t1 {
+        font-weight: 500;
+        @include fl(34, 1.2);
+      }
+      .sub {
+        @include fl(20, 1.4);
+      }
+    }
+    @include media(500px) {
+      margin: 80px auto 40px;
+      .t1 {
+        @include fl(26, 1.2);
+      }
+      .sub {
+        @include fl(18, 1.4);
+      }
+    }
   }
   .swiper-wrapper {
     // (1120-766)/2
     position: relative;
     left: -177px;
+    @include media(1180px) {
+      left: 0;
+    }
   }
   .swiper-slide {
     width: var(--describe-slider-width);
@@ -204,12 +332,39 @@
         margin-bottom: 14px;
       }
       .sub {
-        width: var(--describe-slider-sub);
+        max-width: var(--describe-slider-sub);
         font: var(--unnamed-font-style-normal) normal
           var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) /
           var(--unnamed-line-spacing-28) var(--unnamed-font-family-segoe-ui);
         letter-spacing: var(--unnamed-character-spacing--0-9);
         color: var(--unnamed-color-1c1c1c);
+      }
+      @include media(1180px) {
+        .t1 {
+          font-weight: 500;
+          @include ft(28, 40);
+        }
+        .sub {
+          @include ft(20, 32);
+        }
+      }
+      @include media(768px) {
+        margin: 36px 0 5px;
+        .t1 {
+          @include ft(24, 36);
+        }
+        .sub {
+          @include ft(18, 32);
+        }
+      }
+      @include media(500px) {
+        margin: 22px 0 5px;
+        .t1 {
+          @include fl(22, 1.2);
+        }
+        .sub {
+          @include fl(16, 1.4);
+        }
       }
     }
   }
@@ -219,6 +374,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
   background-color: #ececec;
   gap: 124px;
   padding: 138px 0;
@@ -264,6 +420,74 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+  @include media(1180px) {
+    background-color: #fff;
+    padding: 124px 0;
+    & > div {
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 100%;
+      gap: 124px;
+    }
+    .motor-link-wrap {
+      width: 100%;
+      .sub {
+        @include ft(24, 29);
+        font-weight: 500;
+      }
+      .t1 {
+        @include ft(42, 58);
+        font-weight: 600;
+      }
+      .link {
+        @include ft(18, 22);
+      }
+      .img {
+        width: 687px;
+        height: calc(240px * 687px / 320px);
+      }
+    }
+  }
+  @include media(768px) {
+    padding: 80px 0;
+    gap: 80px;
+    & > div {
+      gap: 80px;
+    }
+    .motor-link-wrap {
+      .img {
+        width: 400px;
+        height: calc(240px * 400px / 320px);
+      }
+    }
+  }
+  @include media(500px) {
+    padding: 50px 0;
+    gap: 50px;
+    & > div {
+      gap: 50px;
+    }
+    .motor-link-wrap {
+      .sub {
+        @include fl(20, 1.4);
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      .t1 {
+        @include fl(32, 1.4);
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .link {
+        @include fl(18, 1.4);
+        margin-bottom: 0px;
+      }
+      .img {
+        width: 300px;
+        height: calc(240px * 300px / 320px);
+      }
     }
   }
 }
