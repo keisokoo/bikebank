@@ -177,6 +177,36 @@ $inner-width: 1120px;
       color: #ffffff;
     }
   }
+  @include media(1120px) {
+    & > div {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+  }
+  @include media(800px) {
+    height: 100px;
+    & > div {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 32px;
+      .t1 {
+        @include fl(26, 1.4);
+      }
+      .link {
+        width: 160px;
+        height: 48px;
+        @include fl(20, 1.4);
+      }
+    }
+  }
+  @include media(568px) {
+    & > div {
+      .link {
+        width: 120px;
+        @include fl(18, 1.4);
+      }
+    }
+  }
 }
 @mixin specBox() {
   max-width: 1120px;
@@ -193,12 +223,19 @@ $inner-width: 1120px;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
     display: flex;
+    @include media(800px) {
+      flex-direction: column;
+      padding: 50px 0;
+    }
     & > div {
       padding: 50px 70px;
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 36px;
+      @include media(800px) {
+        padding: 0;
+      }
       .s1 {
         font: var(--unnamed-font-style-normal) normal
           var(--unnamed-font-weight-bold) var(--unnamed-font-size-18) /

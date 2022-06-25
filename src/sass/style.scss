@@ -39,15 +39,28 @@
       right: 50px;
       width: 74px;
       height: 74px;
+      @include media(568px) {
+        top: 16px;
+        right: 16px;
+        width: 56px;
+        height: 56px;
+      }
     }
     .title-name-box {
       @include titleBox();
       padding-left: 55px;
       padding-right: 55px;
       background-color: #e2e2e2;
+      @include media(1120px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
     .details {
       @include specBox();
+      @include media(1120px) {
+        padding: 0 32px;
+      }
     }
     .grid-box {
       display: grid;
@@ -55,6 +68,12 @@
         "A B" 306px
         "C C" 370px
         "D E" 306px;
+      @include media(568px) {
+        grid-template:
+          "A B" 280px
+          "C C" 340px
+          "D E" 280px;
+      }
       & > div:nth-child(1) {
         grid-area: A;
       }
@@ -91,7 +110,7 @@
   }
   .describes {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 50px 50px 72px;
     background-color: #f9f9f9;
@@ -113,6 +132,20 @@
         var(--unnamed-font-weight-normal) 16px/24px
         var(--unnamed-font-family-segoe-ui);
       color: var(--unnamed-color-1c1c1c);
+    }
+    @include media(568px) {
+      flex-direction: column;
+      padding: 50px 32px;
+      gap: 64px;
+      & > div {
+        width: 100%;
+      }
+      .t1 {
+        @include fl(24, 1.4);
+      }
+      .sub {
+        @include fl(20, 1.8);
+      }
     }
   }
 }

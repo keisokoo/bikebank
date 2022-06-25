@@ -4,6 +4,12 @@
   width: 100%;
   height: 904px;
   @include backgroundInit();
+  @include media(768px) {
+    height: 800px;
+  }
+  @include media(568px) {
+    height: 577px;
+  }
 }
 .viva-two {
   @include titleBox();
@@ -21,6 +27,21 @@
     font: var(--unnamed-font-style-normal) normal
       var(--unnamed-font-weight-bold) 58px/70px
       var(--unnamed-font-family-segoe-ui);
+  }
+  @include media(1120px) {
+    .text {
+      @include ft(40, 66);
+      max-width: 768px;
+    }
+  }
+  @include media(800px) {
+    padding: 120px 32px;
+  }
+  @include media(568px) {
+    padding: 60px 24px;
+    .text {
+      @include ft(26, 50);
+    }
   }
 }
 .viva-four {
@@ -47,6 +68,20 @@
       var(--unnamed-font-size-18) / 34px var(--unnamed-font-family-segoe-ui);
     color: var(--unnamed-color-1c1c1c);
     letter-spacing: -0.45px;
+  }
+  @include media(1120px) {
+    height: 800px;
+  }
+  @include media(800px) {
+    height: 600px;
+  }
+  @include media(568px) {
+    height: 400px;
+    .link {
+      white-space: nowrap;
+      min-width: 220px;
+      bottom: 51px;
+    }
   }
 }
 .viva-five {
@@ -86,6 +121,46 @@
       font: var(--unnamed-font-style-normal) normal
         var(--unnamed-font-weight-bold) 100px/120px
         var(--unnamed-font-family-segoe-ui);
+    }
+  }
+  @include media(1120px) {
+    height: 700px;
+    .text-box {
+      max-width: 768px;
+      position: relative;
+      top: 50%;
+      transform: initial;
+      left: 0;
+      .sub {
+        @include ft(28, 34);
+      }
+      .t1 {
+        margin-top: 18px;
+        @include ft(64, 77);
+      }
+    }
+  }
+  @include media(800px) {
+    height: 600px;
+    .img {
+      background-position-x: calc(50% + 150px);
+      background-position-y: 40px;
+    }
+    .text-box {
+      max-width: 100%;
+      padding: 0 64px;
+    }
+  }
+  @include media(568px) {
+    height: 400px;
+    .text-box {
+      .sub {
+        @include fl(26, 1.4);
+      }
+      .t1 {
+        margin-top: 9px;
+        @include fl(40, 1.4);
+      }
     }
   }
 }
@@ -128,10 +203,14 @@
         &:hover {
           transform: scale(1.05);
         }
-        padding: 56px 50px;
         color: #fff;
         &.two {
           color: #1c1c1c;
+        }
+        .text-box {
+          position: absolute;
+          top: 56px;
+          left: 50px;
         }
         .sub {
           font: var(--unnamed-font-style-normal) normal
@@ -146,6 +225,24 @@
             var(--unnamed-font-weight-bold) 32px/38px
             var(--unnamed-font-family-segoe-ui);
         }
+        img {
+          position: relative;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          &.mobile {
+            display: none;
+          }
+          @include media(1120px) {
+            &.mobile {
+              display: block;
+            }
+            &.pc {
+              display: none;
+            }
+          }
+        }
       }
     }
     & > div:nth-child(1) {
@@ -158,12 +255,86 @@
       grid-area: C;
     }
   }
+  @include media(1120px) {
+    max-width: 768px;
+    padding-top: 128px;
+    & > .t1 {
+      @include ft(40, 60);
+      padding-bottom: 36px;
+    }
+    .grid-box {
+      grid-template:
+        "A A" 470px
+        "B B" 470px
+        "C C" 470px;
+      & > div {
+        & > .img {
+          .text-box {
+            top: 36px;
+            left: 26px;
+          }
+          .sub {
+            @include ft(20, 28);
+          }
+          .t1 {
+            margin-top: 27px;
+            @include ft(24, 36);
+          }
+        }
+      }
+    }
+  }
+  @include media(800px) {
+    padding: 128px 32px;
+  }
+  @include media(568px) {
+    & > .t1 {
+      @include fl(24, 1.6);
+    }
+    .grid-box {
+      grid-template:
+        "A A" 370px
+        "B B" 370px
+        "C C" 370px;
+      & > div {
+        & > .img {
+          .sub {
+            @include ft(18, 28);
+          }
+          .t1 {
+            margin-top: 27px;
+            @include ft(20, 36);
+          }
+        }
+      }
+    }
+  }
 }
 .viva-seven {
   width: 100%;
   height: 1006px;
   @include backgroundInit();
   position: relative;
+  overflow: hidden;
+  .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.mobile {
+      display: none;
+    }
+    @include media(1120px) {
+      &.mobile {
+        display: block;
+      }
+      &.pc {
+        display: none;
+      }
+    }
+  }
   .text-box {
     position: absolute;
     top: 50%;
@@ -187,11 +358,75 @@
         var(--unnamed-font-family-segoe-ui);
     }
   }
+  @include media(1120px) {
+    height: 700px;
+    .text-box {
+      transform: translate(-50%, -50%);
+      max-width: 768px;
+      .sub {
+        @include ft(28, 34);
+      }
+      .t1 {
+        @include ft(64, 77);
+      }
+    }
+  }
+  @include media(800px) {
+    .img {
+      background-position: right bottom;
+    }
+    height: 600px;
+    .text-box {
+      top: 50%;
+      padding: 0 32px;
+    }
+  }
+  @include media(568px) {
+    height: 500px;
+    .img {
+      background-position: right bottom;
+    }
+    .text-box {
+      top: 40%;
+      .sub {
+        @include ft(22, 30);
+      }
+      .t1 {
+        @include ft(40, 60);
+      }
+    }
+  }
 }
 .viva-eight {
   width: 100%;
   position: relative;
   margin-bottom: 271px;
+  .swiper-outer {
+    position: relative;
+    width: 100%;
+  }
+  .slide-control-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    max-width: 300px;
+    transition: opacity 0.3s;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.prev {
+      left: 0;
+      transform: rotate(180deg);
+    }
+    &.next {
+      right: 0;
+    }
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+  }
   & > .t1 {
     width: 1120px;
     margin: 169px auto 151px;
@@ -203,28 +438,6 @@
   }
   .swiper-box {
     position: relative;
-    .slide-control-btn {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 60px;
-      max-width: 300px;
-      transition: opacity 0.3s;
-      z-index: 11;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &.prev {
-        left: 0;
-        transform: rotate(180deg);
-      }
-      &.next {
-        right: 0;
-      }
-      &.swiper-button-disabled {
-        opacity: 0;
-      }
-    }
   }
   .swiper-wrapper {
     margin-left: calc((-543px - 34px) / 2);
@@ -252,6 +465,51 @@
           var(--unnamed-font-family-segoe-ui);
         letter-spacing: -0.88px;
         color: #ffffff;
+      }
+    }
+  }
+  @include media(1120px) {
+    margin-bottom: 120px;
+    overflow: hidden;
+    & > .t1 {
+      max-width: 768px;
+      margin: 128px auto 78px;
+      @include ft(40, 60);
+    }
+    .swiper-box {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    .swiper-wrapper {
+      margin-left: 0px;
+    }
+    .swiper-slide {
+      width: 436px;
+      img.img-box {
+        width: 100%;
+      }
+    }
+  }
+  @include media(800px) {
+    & > .t1 {
+      padding: 0 32px;
+      @include ft(40, 60);
+    }
+    .swiper-box {
+      padding: 0 32px;
+    }
+  }
+  @include media(568px) {
+    margin-bottom: 100px;
+    .swiper-slide {
+      width: 80%;
+    }
+    & > .t1 {
+      @include ft(28, 40);
+      margin: 100px auto 39px;
+      width: 100%;
+      br {
+        display: none;
       }
     }
   }
@@ -293,6 +551,47 @@
       font: var(--unnamed-font-style-normal) normal
         var(--unnamed-font-weight-bold) 100px/120px
         var(--unnamed-font-family-segoe-ui);
+    }
+  }
+  @include media(1120px) {
+    height: 700px;
+    .text-box {
+      max-width: 768px;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: initial;
+      left: 0;
+      .sub {
+        @include ft(28, 34);
+      }
+      .t1 {
+        margin-top: 18px;
+        @include ft(64, 77);
+      }
+    }
+  }
+  @include media(800px) {
+    height: 600px;
+    .img {
+      background-position-x: calc(50% + 150px);
+      background-position-y: 40px;
+    }
+    .text-box {
+      max-width: 100%;
+      padding: 0 64px;
+    }
+  }
+  @include media(568px) {
+    height: 400px;
+    .text-box {
+      .sub {
+        @include fl(26, 1.4);
+      }
+      .t1 {
+        margin-top: 9px;
+        @include fl(40, 1.4);
+      }
     }
   }
 }

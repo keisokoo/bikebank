@@ -5,12 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "horizontal",
     modules: [Navigation],
     navigation: {
-      nextEl: ".swiper-describe-one>.slide-control-btn.next",
-      prevEl: ".swiper-describe-one>.slide-control-btn.prev",
+      nextEl: ".slide-control-btn.next",
+      prevEl: ".slide-control-btn.prev",
     },
     slidesPerView: "auto",
-    spaceBetween: 34,
+    spaceBetween: 32,
     loop: false,
     centeredSlides: true,
+    breakpoints: {
+      100: {
+        centeredSlides: false,
+        spaceBetween: 32,
+      },
+      768: {
+        centeredSlides: false,
+        spaceBetween: 32,
+      },
+      1180: {
+        centeredSlides: true,
+        spaceBetween: 34,
+      },
+    },
   })
 })

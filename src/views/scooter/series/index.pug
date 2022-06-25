@@ -6,7 +6,11 @@ block styles
 block contents
   +modalPlus()
   +modalUtility()
-  .series-one(style={"background-image":`url(${require("../../../images/scooter/series/video-kv-hero-placeholder.png")})`})
+  .series-one.pc(style={"background-image":`url(${require("../../../images/scooter/series/video-kv-hero-placeholder.png")})`})
+    .text-box
+      .sub 아주 새로운
+      .t1 고고로 2 시리즈
+  .series-one.mobile(style={"background-image":`url(${require("../../../images/scooter/series/video-kv-hero-placeholder_m.png")})`})
     .text-box
       .sub 아주 새로운
       .t1 고고로 2 시리즈
@@ -35,7 +39,7 @@ block contents
             .label 브레이크 시스템
       .describes-two
         .t1 신중하게 최적화된 주행 경험
-        .sub 더 부드럽고 세련된 승차감. 세련되고 아름다운 것부터 거친 것까지<br/>Gogoro 2 시리즈는 원하는 모든 라이딩 요구 사항을 충족하기 위해 원하는 모델을 선택할 수 있습니다.
+        .sub 더 부드럽고 세련된 승차감. 세련되고 아름다운 것부터 거친 것까지<br/>Gogoro 2 시리즈는 원하는 모든 라이딩 요구 사항을 충족하기 위해\n원하는 모델을 선택할 수 있습니다.
       .part-details
         .one
           img(src=require("../../../images/scooter/series/img-series-feature-1.png"))
@@ -59,7 +63,7 @@ block contents
             .sub 기하학적 디자인으로 만들어진 인체공학적 레버로 쉽게 주차할 수 있습니다.
       .describes-three
         .t1 미려한 동작, 감각적인 이해
-        .sub 새로운 세대의 이동이 시작됩니다. 의도적으로 드러내지 않아도 부드럽게 절제된 아름다움이 잘 나타납니다. 도시의 거리에서 움직이는 빛이 되어보세요.
+        .sub 새로운 세대의 이동이 시작됩니다. 의도적으로 드러내지 않아도\n부드럽게 절제된 아름다움이 잘 나타납니다.\n도시의 거리에서 움직이는 빛이 되어보세요.
       .grid-box
         div
           .img(style={"background-image": `url(${require("../../../images/scooter/series/img-series-gallery-1.png")})`})
@@ -72,14 +76,16 @@ block contents
         div
           .img(style={"background-image": `url(${require("../../../images/scooter/series/img-series-gallery-5.png")})`})
       .user-experience
-        img(src=require("../../../images/scooter/series/img-experience-1.png"))
-        .t1 눈부신, 당신이 보는 것
+        img.pc(src=require("../../../images/scooter/series/img-experience-1.png"))
+        img.mobile(src=require("../../../images/scooter/series/img-experience-1_m.png"))
+        .t1.pc 눈부신, 당신이 보는 것
         .text-box
+          .t1.mobile  눈부신, 당신이 보는 것
           .t1 맞춤형 색상, 커스텀
           .sub 고고로 앱을 열고 대시보드의 컬러 시스템을 자유롭게 설정하고<br/>기분, 의상, 개성에 따른 컬러로 나만의 스타일을 보여주세요.
       .gogoro-app
         .t1 고고로 어플리케이션
-        .sub 스마트 드라이빙 기술은 일상적인 주행을 보다 안전하고 간단하며 쉽게 만들어줍니다.
+        .sub 스마트 드라이빙 기술은 일상적인 주행을 \n보다 안전하고 간단하며 쉽게 만들어줍니다.
         a.link(href="/application")="더 알아보기 >"
       .extra-describes
         div
@@ -91,24 +97,29 @@ block contents
           .t1 레인 스마트 모드
           .sub 날씨 정보에 실시간으로 연결하여 레인 스마트 모드가 활성화되면 자동으로 토크 출력을 조정하여 미끄러운 도로 조건에 적응합니다.
         div
-          img(src=require("../../../images/scooter/series/img-series-sub-feature-1.png"))
+          img(src=require("../../../images/scooter/series/img-series-sub-feature-3.png"))
           .t1 리버스 어시스트
           .sub 버튼을 누르면 차가 천천히 후진합니다. 주차공간이 아무리 붐비더라도 자유롭게 탈출할 수 있습니다.
   .series-four
-    .t1 나만의 고고로 선택
+    .t1.pc 나만의 고고로 선택
     .s2-motors-wrapper
       div
         img(src=require("../../../images/scooter/m2.png") data-href="plus")
+        .colors.mobile
+          span(style={"background-color":"#E5E5E5"})
+          span(style={"background-color":"#474747"})
         .t1 고고로 2 플러스
         .sub 모던한 라이딩의 새로운 기준
-        .colors
+        .colors.pc
           span(style={"background-color":"#E5E5E5"})
           span(style={"background-color":"#474747"})
       div
         img(src=require("../../../images/scooter/m3.png") data-href="utility")
+        .colors.mobile
+          span(style={"background-color":"#474747"})
         .t1 고고로 2 유틸리티
         .sub 비즈니스를 위한 이동
-        .colors
+        .colors.pc
           span(style={"background-color":"#474747"})
 
 block page-script

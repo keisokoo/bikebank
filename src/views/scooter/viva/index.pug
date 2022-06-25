@@ -25,21 +25,28 @@ block contents
     .t1 무엇이든 할 수 있을 만큼 작습니다!<br/>그 이상도 그 이하도 아닌 완벽한 균형.
     .grid-box
       div
-        .one.img(style={"background-image":`url(${require("../../../images/scooter/viva/img-experience-1.png")})`})
+        .one.img
+          img(src=require("../../../images/scooter/viva/img-experience-1.png"))
           .text-box
             .sub 깃털처럼 가벼운 스마트 전기 스쿠터
             .t1 과잉은 제쳐두고 가장 좋은 것만<br/>남겨두십시오. 가벼움과 자유를 위한<br/>절대적인 단순함.
       div
-        .two.img(style={"background-image":`url(${require("../../../images/scooter/viva/img-experience-2.png")})`})
+        .two.img
+          img.pc(src=require("../../../images/scooter/viva/img-experience-2.png"))
+          img.mobile(src=require("../../../images/scooter/viva/img-experience-2_m.png"))
           .text-box
             .sub 좋은 주행
             .t1 작은 차체와 높은 접지 페달로<br/>가볍게 걸을 수 있고,<br/>단차가 있으면 어디에서나<br/>멈출 수 있습니다.
       div
-        .three.img(style={"background-image":`url(${require("../../../images/scooter/viva/img-experience-3.png")})`})
+        .three.img
+          img.pc(src=require("../../../images/scooter/viva/img-experience-3.png"))
+          img.mobile(src=require("../../../images/scooter/viva/img-experience-3_m.png"))
           .text-box
             .sub 작게 생각하다
             .t1 큰 것이 좋나요? 더 극단적으로<br/>작습니다. 복잡함은 이제 그만!<br/>단순하게, 삶을 행복과<br/>기쁨으로 채우세요.
-  .viva-seven(style={"background-image":`url(${require("../../../images/scooter/viva/back.png")})`})
+  .viva-seven
+    .img.pc(style={"background-image":`url(${require("../../../images/scooter/viva/back.png")})`})
+    .img.mobile(style={"background-image":`url(${require("../../../images/scooter/viva/back_m.png")})`})
     .text-box
       .sub 과소평가되지 않으며
       .t1 매우 의미있는
@@ -53,17 +60,18 @@ block contents
         {url:"../../../images/scooter/viva/img-hardware-4.png", title:"풀 LED 조명 시스템"},
         {url:"../../../images/scooter/viva/img-hardware-5.png", title:"내구성 높은 기술"},
       ];
-    div(class=`swiper-describe-one swiper-box`)
+    .swiper-outer 
       button.slide-control-btn.prev
         img(src=require("../../../images/prev_arrow.svg"))
       button.slide-control-btn.next
         img(src=require("../../../images/next_arrow.svg"))
-      div.swiper-wrapper
-        each val, index in describesOne
-          div.swiper-slide 
-            img.img-box(src=require(val.url))
-            .text-box
-              .t1=val.title
+      div(class=`swiper-describe-one swiper-box`)
+        div.swiper-wrapper
+          each val, index in describesOne
+            div.swiper-slide 
+              img.img-box(src=require(val.url))
+              .text-box
+                .t1=val.title
   .viva-nine(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-design-bg.png")})`})
     .img(style={"background-image":`url(${require("../../../images/scooter/viva/img-divider-design-scooter.png")})`})
     .text-box
