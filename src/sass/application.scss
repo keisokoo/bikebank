@@ -30,6 +30,22 @@
       color: #ffffff;
     }
   }
+  @include media(1120px) {
+    background-position: center top;
+    height: 800px;
+    .text-box {
+      padding-top: 120px;
+    }
+  }
+  @include media(800px) {
+  }
+  @include media(568px) {
+    .text-box {
+      .t1 {
+        @include fl(32, 1.4);
+      }
+    }
+  }
 }
 .application-two {
   padding: 160px 0;
@@ -61,6 +77,18 @@
       text-align: center;
       letter-spacing: -0.55px;
       color: #1c1c1c;
+    }
+    @include media(568px) {
+      padding: 0 32px;
+      .t1 {
+        @include fl(32, 1.6);
+      }
+      .sub {
+        br {
+          display: none;
+        }
+        @include fl(20, 1.6);
+      }
     }
   }
 }
@@ -100,6 +128,40 @@
       }
     }
   }
+  @include media(1120px) {
+    max-width: 768px;
+    .grid-box {
+      grid-template-rows: 319px 319px;
+      & > div {
+        .text-box {
+          padding-top: 50px;
+        }
+      }
+    }
+  }
+  @include media(568px) {
+    .grid-box {
+      grid-template:
+        "B" 319px
+        "A" 319px
+        "C" 319px
+        "D" 319px;
+      & > div:nth-child(1) {
+        grid-area: A;
+      }
+      & > div:nth-child(2) {
+        grid-area: B;
+      }
+      & > div:nth-child(3) {
+        grid-area: C;
+      }
+      & > div:nth-child(4) {
+        grid-area: D;
+      }
+      & > div {
+      }
+    }
+  }
 }
 
 .application-four {
@@ -136,9 +198,28 @@
     align-items: center;
     gap: 40px;
   }
+  @include media(1120px) {
+  }
+  @include media(800px) {
+  }
+  @include media(568px) {
+    .title-box {
+      padding: 0 32px;
+      .t1 {
+        @include fl(32, 1.6);
+      }
+      .sub {
+        @include fl(20, 1.6);
+        br {
+          display: none;
+        }
+      }
+    }
+  }
 }
 .application-five {
   width: 100%;
+  overflow: hidden;
   .application-slide-wrap {
     width: 100%;
     max-width: 1120px;
@@ -165,6 +246,16 @@
       &.swiper-button-disabled {
         opacity: 0.4;
       }
+    }
+    @include media(1120px) {
+      max-width: 768px;
+    }
+    @include media(800px) {
+      max-width: 468px;
+    }
+    @include media(568px) {
+      text-align: center;
+      padding: 0 32px;
     }
   }
   .swiper-application {
@@ -212,5 +303,8 @@
         background-color: #1c1c1c;
       }
     }
+  }
+  @include media(568px) {
+    padding: 65 0 200px;
   }
 }

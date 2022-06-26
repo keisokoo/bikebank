@@ -19,5 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
       //   return `<span class="${className}" style="background-color:${motors[index].color}"></span>`
       // },
     },
+    breakpoints: {
+      100: {
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 44,
+      },
+    },
   })
 })
