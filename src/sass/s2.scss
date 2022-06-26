@@ -28,11 +28,30 @@
       letter-spacing: -2.3px;
     }
   }
+  @include media(1120px) {
+    min-height: 1147px;
+  }
+  @include media(800px) {
+    min-height: calc(100vh - 90px);
+    .text-box {
+      bottom: 50px;
+    }
+  }
+  @include media(568px) {
+  }
 }
 .s2-two {
   @include backgroundInit();
-  width: 100%;
-  min-height: 940px;
+  height: 940px;
+  @include media(1120px) {
+    height: 640px;
+  }
+  @include media(800px) {
+    height: 440px;
+  }
+  @include media(568px) {
+    height: 320px;
+  }
 }
 .s2-three {
   @include backgroundInit();
@@ -43,6 +62,9 @@
     padding-top: 133px;
     text-align: center;
     color: #ffffff;
+    img {
+      margin-bottom: 40px;
+    }
     .t1 {
       letter-spacing: -2.9px;
       font: var(--unnamed-font-style-normal) normal
@@ -99,18 +121,78 @@
       }
     }
   }
+  @include media(1120px) {
+    .text-box {
+      padding-top: 110px;
+      .t1 {
+        @include ft(42, 50);
+        margin: 0 auto;
+      }
+      .sub {
+        @include ft(24, 34);
+        br {
+          display: none;
+        }
+        max-width: 486px;
+        margin: 34px auto 41px;
+      }
+    }
+  }
+  @include media(800px) {
+    .text-box {
+      padding: 70px 32px 0;
+    }
+  }
+  @include media(668px) {
+    .text-box {
+      padding-top: 50px;
+      padding-bottom: 450px;
+      .spec-box {
+        flex-direction: column;
+        width: 100%;
+        & > div {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 .s2-four {
   @include backgroundInit();
   width: 100%;
-  min-height: 940px;
+  height: 940px;
+  @include media(1120px) {
+    height: 800px;
+  }
+  @include media(800px) {
+    height: 640px;
+  }
+  @include media(568px) {
+    height: 360px;
+  }
 }
 
 .s2-five {
   width: 100%;
   img {
     width: 100%;
+  }
+  @include media(1120px) {
+    height: 900px;
+    overflow: hidden;
+    background-color: #000000;
+    img {
+      margin-top: 36px;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+    }
+  }
+  @include media(800px) {
+  }
+  @include media(568px) {
+    height: 600px;
   }
 }
 
@@ -137,6 +219,37 @@
         var(--unnamed-font-family-segoe-ui);
       letter-spacing: var(--unnamed-character-spacing--0-55);
       margin-top: 32px;
+    }
+  }
+  @include media(1120px) {
+    padding: 120px 0;
+    & > .text-box {
+      .t1 {
+        @include ft(42, 50);
+      }
+      .sub {
+        margin-top: 18px;
+        @include ft(20, 32);
+      }
+    }
+  }
+  @include media(800px) {
+    padding: 120px 32px;
+  }
+  @include media(568px) {
+    padding: 80px 0;
+    & > .text-box {
+      padding: 0 32px;
+      .t1 {
+        @include ft(32, 40);
+      }
+      .sub {
+        margin-top: 18px;
+        @include ft(18, 24);
+        br {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -176,6 +289,81 @@
         }
       }
     }
+    @include media(1120px) {
+      flex-direction: column;
+      max-width: 768px;
+      width: 100%;
+      & > div {
+        max-width: 768px;
+        width: 100%;
+      }
+    }
+  }
+  @include media(1120px) {
+    margin-top: 83px;
+    max-width: 768px;
+    width: 100%;
+    .system-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 80px;
+      &:nth-child(2),
+      &:nth-child(3) {
+        .black {
+          background-position: center top;
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &.reverse {
+        flex-direction: column-reverse;
+      }
+      & > div {
+        padding: 0;
+        width: 100%;
+        height: 390px;
+        &:not(.black) {
+          height: auto;
+          padding: 40px 32px;
+        }
+        .text-box {
+          .t1 {
+            @include ft(24, 28);
+          }
+          .sub {
+            @include ft(20, 32);
+          }
+        }
+      }
+    }
+  }
+  @include media(800px) {
+  }
+  @include media(568px) {
+    padding: 0 16px;
+    .system-row {
+      margin-bottom: 60px;
+      & > div {
+        height: 300px;
+        &:not(.black) {
+          height: auto;
+          padding: 32px;
+        }
+        .text-box {
+          text-align: left;
+          .t1 {
+            @include fl(22, 1.6);
+          }
+          .sub {
+            @include fl(18, 1.6);
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
 .s2-seven {
@@ -183,6 +371,9 @@
   width: 100%;
   margin: 0 auto;
   padding: 200px 0;
+  @include media(1120px) {
+    padding: 120px 0;
+  }
 }
 .s2-motors-wrapper {
   text-align: center;
@@ -222,6 +413,15 @@
 .s2-seven {
   .details {
     @include specBox();
+    @include media(1120px) {
+      max-width: 768px;
+      margin: 120px auto 0;
+    }
+    @include media(800px) {
+      padding: 0 32px;
+    }
+    @include media(568px) {
+    }
   }
 }
 .motors-wrapper {

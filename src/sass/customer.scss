@@ -38,6 +38,20 @@
       background-color: #ffffff;
     }
   }
+  @include media(800px) {
+    .text-box {
+      .phone {
+        max-width: 550px;
+      }
+    }
+  }
+  @include media(568px) {
+    .text-box {
+      .phone {
+        max-width: 300px;
+      }
+    }
+  }
 }
 .customer-two {
   width: 100%;
@@ -111,5 +125,8 @@
       letter-spacing: -1.1px;
       color: #0077ff;
     }
+  }
+  @include media(1120px) {
+    display: none;
   }
 }
