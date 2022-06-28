@@ -7,5 +7,6 @@ block contents
   div#map
 
 block page-script
-  script(src="//dapi.kakao.com/v2/maps/sdk.js?libraries=services&appkey=4a55bf3078fdbcc25cbc85c44e2be418") 
+  - var appKey = `4a55bf3078fdbcc25cbc85c44e2be418`
+  script(src=`//dapi.kakao.com/v2/maps/sdk.js?libraries=services&appkey=${appKey}`) 
   script(src=require("../../scripts/map.ts"))
