@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 4,
     spaceBetween: 16,
     loop: false,
+    modules: [Navigation],
+    navigation: {
+      nextEl: ".motor-btn.next",
+      prevEl: ".motor-btn.prev",
+    },
     breakpoints: {
       100: {
         slidesPerView: 2,

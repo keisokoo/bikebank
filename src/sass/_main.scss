@@ -225,11 +225,13 @@
       top: 50px;
       .t1 {
         font-size: 24px;
-        line-height: 1;
+        line-height: 1.6;
+        margin-bottom: 6px;
       }
       .sub {
         font-size: 18px;
-        margin-bottom: 7px;
+        line-height: 1.6;
+        margin-bottom: 8px;
       }
     }
   }
@@ -311,12 +313,13 @@
         top: 40px;
         .t1 {
           font-size: 24px;
-          line-height: 1;
-          margin-bottom: 17px;
+          line-height: 1.6;
+          margin-bottom: 6px;
         }
         .sub {
           font-size: 18px;
-          line-height: 1;
+          line-height: 1.6;
+          margin-bottom: 8px;
         }
       }
     }
@@ -352,13 +355,13 @@
       top: 60px;
       .t1 {
         font-size: 24px;
-        margin-bottom: 17px;
-        line-height: 1;
+        line-height: 1.6;
+        margin-bottom: 6px;
       }
       .sub {
         font-size: 18px;
-        margin-bottom: 7px;
-        line-height: 1;
+        line-height: 1.6;
+        margin-bottom: 8px;
       }
     }
   }
@@ -465,7 +468,7 @@
       }
     }
   }
-  @include media(768px) {
+  @include media(568px) {
     & > div {
       img {
         height: 600px;

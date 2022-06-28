@@ -503,6 +503,14 @@
     margin-bottom: 100px;
     .swiper-slide {
       width: 80%;
+      .text-box {
+        top: 0;
+        left: 0;
+        padding: 26px;
+        .t1 {
+          @include ft(24, 40);
+        }
+      }
     }
     & > .t1 {
       @include ft(28, 40);
