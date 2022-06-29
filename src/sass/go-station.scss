@@ -15,3 +15,21 @@
     padding: 5px;
   }
 }
+
+.map-details {
+  position: fixed;
+  bottom: 36px;
+  left: 36px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  z-index: 101;
+  .t1 {
+    @include fl(24, 1.6);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .sub {
+    @include fl(18, 1.6);
+  }
+}
