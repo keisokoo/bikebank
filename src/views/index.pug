@@ -12,16 +12,16 @@ block contents
     .top-text-box
       .t1 고고로 2 플러스
       .h1 도시에서 달리는 즐거움
-      a.m1(href="/scooter/series") 더 알아보기
+      a.m1(href=publicPath+"/scooter/series") 더 알아보기
     .top-box
       img(src=require("../images/main_top.png"))
   .main-two
-    a(href="/news/details/page-1.html")
+    a(href=publicPath+"/news/details/page-1.html")
       img(src=require("../images/top_left.png"))
       .text-box
         .sub 최신 소식
         .t1 부산국제모터쇼 #[br] BIMOS22참가
-    a(href="/network")
+    a(href=publicPath+"/network")
       img(src=require("../images/top_right.png"))
       .text-box
         .sub 교환 에너지
@@ -30,48 +30,48 @@ block contents
     div
       .text-box 
         .t1 가까운 고스테이션을 찾아보세요
-        .sub 국내에서도 늘어나는 고스테이션
-        a.link(href="/go-station")="고스테이션 지도 보기 >"
+        .sub 플랫폼 활성화를 위한 국내 인프라 확장
+        a.link(href=publicPath+"/go-station")="고스테이션 지도 보기 >"
   .main-four
     div
       img(src=require("../images/subscribe_gogoro.png"))
       .text-box 
         .t1 고고로의 소식을 받아보세요
         .sub 고고로 카카오톡 친구추가
-        a.link(href="/news")="더 알아보기 >"
+        a.link(href=publicPath+"/news")="더 알아보기 >"
     div
       img(src=require("../images/new_of_gogoro_acc.png"))
       .text-box 
-        .t1 고고로 악세서리 소식
+        .t1 고고로 악세서리
         .sub 내 취향에 맞게 커스텀
-        a.link(href="/news/details/page-3.html")="더 알아보기 >"
+        a.link(href=publicPath+"/news/details/page-3.html")="더 알아보기 >"
   .main-five(style={"background-image": `url(${require("../images/gogoro_motors.png")})`})
     div
       .text-box 
         .t1 고고로 스마트 전기 스쿠터
-        .sub 타의 추종을 불허하는 라이딩 경험
-        a.link(href="/scooter")="더 알아보기 >"
+        .sub 라이딩 경험의 새로운 기준
+        a.link(href=publicPath+"/scooter")="더 알아보기 >"
   .main-six
     div.gogoro
       img(src=require("../images/gogoro_app.png"))
       .text-box
         .t1 고고로 어플리케이션
-        .sub 지속적인 최신 스마트 기능을 통해<br/>최적화 된 라이딩을 경험하세요.
-        a.link(href="/application")="더 알아보기 >"
+        .sub 스마트 기능을 탑재한 고고로 앱으로 <br/>라이딩을 보다 쉽고 완벽하게 즐기세요.
+        a.link(href=publicPath+"/application")="더 알아보기 >"
     div
       img(src=require("../images/gogoro_smart_battery.png"))
       .text-box 
         .t1 고고로 네트워크\n 스마트 배터리 교환 플랫폼
-        .sub 당신을 위해 더 빠르고, 더 쉽고, 똑똑하게<br/>Gogoro Smartscooter 보조 에너지.
-        a.link(href="/news/details/page-2.html")="더 알아보기 >"
+        .sub 더 빠르고, 더 편리하게 <br/>몇 초 만에 교체하는 스마트 배터리
+        a.link(href=publicPath+"/news/details/page-2.html")="더 알아보기 >"
   .main-seven(style={"background-image": `url(${require("../images/gogoro_move_on.png")})`})
     .text-display
-      .t1 고고로는 #[br]당신을 위해#[br]계속 전진합니다.
+      .t1 배터리 교체는 <br/>모든 것을 바꿉니다. <br/>SWAP & GO
       a.link(href="https://www.youtube.com/watch?v=DG_utQmi7rs" target="_blank")="비디오 보기 >"
   .main-eight
     div
       .box-header
-        .t1 우리는 고고로
+        .t1 We are Gogoro
       img(src=require("../images/we_are_gogoro.png"))
       .three-flex
         div

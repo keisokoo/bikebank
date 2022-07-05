@@ -10,15 +10,15 @@ const entryObject = files.reduce((obj, file) => {
   return obj
 }, {})
 const variables = require("./variables.js")
-
 const devMode =
   process.env.NODE_ENV === "production" ? "production" : "development"
 const isDev = devMode === "development"
+const publicPath = isDev ? "" : "/gogoro"
 module.exports = {
   mode: devMode,
   output: {
     path: path.join(__dirname, "dist/"),
-    publicPath: "/",
+    publicPath: isDev ? "/" : publicPath + "/",
     filename: "assets/js/[name].[contenthash:8].js",
     clean: false,
   },
@@ -70,7 +70,7 @@ module.exports = {
           embedFilters: {
             escape: true,
           },
-          data: { ...variables, isDev },
+          data: { ...variables, isDev, publicPath },
           method: "render",
         },
       },

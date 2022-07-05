@@ -10,12 +10,12 @@ html(lang="ko-KR")
     meta(name="description" content=description)
     meta(property="og:type" content="website")
     meta(property="og:url" content="https://gogoro.kr")
-    meta(property="og:image" content="/title.jpg")
+    meta(property="og:image" content=publicPath+"/title.jpg")
     meta(name="theme-color" content="#fafafa")
-    link(rel="icon" type="image/icon" href="/favicon.ico")
-    link(rel="icon" type="image/png" href="/BB_icon.png")
-    link(rel="apple-touch-icon" href="/BB_icon.png")
-    link(rel="stylesheet" href="/sources/normalize.css")
+    link(rel="icon" type="image/icon" href=publicPath+"/favicon.ico")
+    link(rel="icon" type="image/png" href=publicPath+"/BB_icon.png")
+    link(rel="apple-touch-icon" href=publicPath+"/BB_icon.png")
+    link(rel="stylesheet" href=publicPath+"/sources/normalize.css")
     link(rel="stylesheet" href=require("../sass/style.scss"))
     block styles
     block head-script
@@ -25,8 +25,8 @@ html(lang="ko-KR")
     #app
       block contents
     block footer
-    script(src="/sources/modernizr-3.11.2.min.js")
-    script(src="/assets/js/main.js")
+    script(src=publicPath+"/sources/modernizr-3.11.2.min.js")
+    script(src=publicPath+"/assets/js/main.js")
     if isDev
       script(src=require("../scripts/dummy.ts"))
     block page-script
@@ -35,25 +35,25 @@ html(lang="ko-KR")
         img#footer-logo(src=require("../images/logo.svg"))
         .footer-flex
           div 
-            a.link(href="/scooter/"): .t1 스마트 스쿠터
+            a.link(href=publicPath+"/scooter/"): .t1 스마트 스쿠터
             .list
-              a.link(href="/scooter/s2/") 고고로 S2 
-              a.link(href="/scooter/series/") 고고로 2 플러스 
-              a.link(href="/scooter/series/") 고고로 2 유틸리티 
-              a.link(href="/scooter/viva/") 고고로 비바
+              a.link(href=publicPath+"/scooter/s2/") 고고로 S2 
+              a.link(href=publicPath+"/scooter/series/") 고고로 2 플러스 
+              a.link(href=publicPath+"/scooter/series/") 고고로 2 유틸리티 
+              a.link(href=publicPath+"/scooter/viva/") 고고로 비바
           div 
-            a.link(href="/network/"): .t1 고고로 네트워크
+            a.link(href=publicPath+"/network/"): .t1 고고로 네트워크
             .list
-              a.link(href="/network/") 스마트 플랫폼
-              a.link(href="/go-station/") 고스테이션 위치
-              a.link(href="/network/") 요금 플랜
+              a.link(href=publicPath+"/network/") 스마트 플랫폼
+              a.link(href=publicPath+"/go-station/") 고스테이션 위치
+              a.link(href=publicPath+"/network/") 요금 플랜
           div 
-            a.link(href="/news/"): .t1 최신소식
+            a.link(href=publicPath+"/news/"): .t1 최신소식
             .list
-              a.link(href="/news") 새소식
-              a.link(href="/news") 프로모션
+              a.link(href=publicPath+"/news") 새소식
+              a.link(href=publicPath+"/news") 프로모션
           div 
-            a.link(href="/customer/"): .t1 고객지원
+            a.link(href=publicPath+"/customer/"): .t1 고객지원
             .list
-              a.link(href="/customer") 고객센터
-              a.link(href="/customer") 자주묻는질문
+              a.link(href=publicPath+"/customer") 고객센터
+              a.link(href=publicPath+"/customer") 자주묻는질문

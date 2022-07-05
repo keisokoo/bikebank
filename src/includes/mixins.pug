@@ -7,17 +7,17 @@ mixin navTheme(color)
             img(src=require("../images/burger.svg"))
           else
             img(src=require("../images/burger-black.svg"))
-        a(href="/")
+        a(href=publicPath+"/")
           if color == 'black'
             img(src=require("../images/logo.svg"))
           else
             img(src=require("../images/logo_black.svg"))
         .mobile-only
       #menu(style={"background-color":color})
-        a(href="/scooter") 스마트 스쿠터
-        a(href="/network") 고고로 네트워크
-        a(href="/news") 최신소식
-        a(href="/customer") 고객지원
+        a(href=publicPath+"/scooter") 스마트 스쿠터
+        a(href=publicPath+"/network") 고고로 네트워크
+        a(href=publicPath+"/news") 최신소식
+        a(href=publicPath+"/customer") 고객지원
 
 mixin modalPlus()
   #modal-plus.modal-wrap(disabled)
@@ -28,7 +28,7 @@ mixin modalPlus()
       .title-name-box
         div
           .t1 고고로 2 PLUS
-          a.link(href="/customer") 구매문의
+          a.link(href=publicPath+"/customer") 구매문의
       .describes
         div
           .t1 보안 업그레이드
@@ -87,7 +87,7 @@ mixin modalUtility()
       .title-name-box
         div
           .t1 고고로 2 Utility
-          a.link(href="/customer") 구매문의
+          a.link(href=publicPath+"/customer") 구매문의
       .describes
         div
           .t1 보안 업그레이드

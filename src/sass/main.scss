@@ -59,10 +59,11 @@
   }
   @include media(768px) {
     min-height: auto;
-    height: 600px;
+    height: 640px;
     .top-box {
       img {
-        object-position: center 100px;
+        object-position: center 80px;
+        height: 640px;
       }
     }
     .t1 {
@@ -74,6 +75,14 @@
     }
     .m1 {
       margin-top: 4px;
+    }
+  }
+  @include media(568px) {
+    .top-box {
+      img {
+        object-position: center 70px;
+        height: 540px;
+      }
     }
   }
 }
