@@ -182,10 +182,11 @@
     }
   }
   @include media(600px) {
+    .t1 {
+      @include ft(38, 40);
+      margin-bottom: 16px;
+    }
     .des {
-      br {
-        display: none;
-      }
       padding: 0 16px;
     }
   }
@@ -198,14 +199,11 @@
       @include ft(24, 26);
     }
     .t1 {
-      @include ft(44, 48);
+      @include ft(34, 40);
       margin-bottom: 16px;
     }
     .des {
       @include ft(18, 32);
-      br {
-        display: none;
-      }
       padding: 0 16px;
     }
   }
